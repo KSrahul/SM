@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>list your profile</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/materialize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+</head>
+
+<body>
+
+    <header class="header" id="header">
+        <div class="header-section">
+
+            <div class="logo">
+                <div class="search-container">
+                    <a href="./index.html">
+                        <img src="./assets/icons/logo.svg" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div class="search-main large-search">
+                <div class="search-type-container">
+                    <span class="search-type-container">
+                        <input class="input-search" type="text" placeholder="Search by lorem ipsum, dolor and sit">
+                    </span>
+                    <div class="search-cross search-input">
+                        <img src="./assets//icons/search-icon.svg" alt="">
+                    </div>
+                    <div class="search-cross search-cross-icon">
+                        <img src="./assets/icons/cross.svg" alt="">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="menus-signing btns-menus post-menus">
+                <div class="nav-search">
+                    <ul class="menus">
+                        <li class="industries-dropdown">
+                            <a href="./industry.html">
+                                Industries
+                                <span class="jump top"></span>
+                                <span class="jump bottom"></span>
+                            </a>
+                            <ul class="industries-menus">
+                                <li>
+                                    <a href="./automotive-industry.html">Automotive Industry</a>
+                                </li>
+                                <li>
+                                    <a href="./industrial-machinery.html">Industrial Machinery Industry</a>
+                                </li>
+                                <li>
+                                    <a href="./aerospace.html">Aerospace &amp; Defense Industry</a>
+                                </li>
+                                <li>
+                                    <a href="./medical.html">Medical Devices Industry</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="./product.html">
+                                Products
+                                <span class="jump top"></span>
+                                <span class="jump bottom"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./events.html">
+                                Events
+                                <span class="jump top"></span>
+                                <span class="jump bottom"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./tenders.html">
+                                Tenders
+                                <span class="jump top"></span>
+                                <span class="jump bottom"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./finance.html">
+                                Financial Services
+                                <span class="jump top"></span>
+                                <span class="jump bottom"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./news.html">
+                                News &amp; Updates
+                                <span class="jump top"></span>
+                                <span class="jump bottom"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./market.html">
+                                Marketplace
+                                <span class="jump top"></span>
+                                <span class="jump bottom"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./academia.html">
+                                Academia
+                                <span class="jump top"></span>
+                                <span class="jump bottom"></span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- <div class="search-cont">
+                                <img class="search-icon" src="./assets/icons/search-icon.svg" alt="">
+                            </div> -->
+                </div>
+            </div>
+
+            <div class="header-btns-container btns-menus post-header-btn">
+                <!-- <div class="header-individual-btn">
+                            <a data-toggle="modal" data-target="#signup">
+                                <button class="header-button">Sign up</button>
+                            </a>
+                        </div> -->
+                <div class="search-cont search-post-icon">
+                    <img class="search-icon" src="./assets/icons/search-icon.svg" alt="">
+                </div>
+                <div class="profile-btn-main">
+                    <button class="header-button header-right-btn profile-btn">
+                                <span class="hi-user">
+                                    Hi 
+                                </span>
+                                Subahlakshmi
+                                <span class="profile-aero">
+                                    <img src="./assets/icons/profile-aero.svg" alt="">
+                                </span>
+                            </button>
+                    <div class="profile-drop-down">
+                        <ul>
+                            <li class="profile-menus">
+                                <span class="profile-drop-img">
+                                            <img src="./assets/icons/profile.svg" alt="">
+                                        </span>
+                                <a href="./profile.html">
+                                            Profile
+                                        </a>
+                            </li>
+                            <li class="profile-menus">
+                                <span class="profile-drop-img">
+                                            <img src="./assets/icons/logout.svg" alt="">
+                                        </span>
+                                <a href="">
+                                            Logout
+                                        </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hamburger-search">
+            <div class="flex-ham-icons">
+                <div class="search-cont smaill-screen-hearch">
+                    <img class="search-icon" src="./assets/icons/Mobile_Search Icon.svg" alt="">
+                </div>
+
+                <div class="doon-ham">
+                    <button class="doon-ham-link">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="doon-slide-menus">
+            <ul class="ham-menus">
+                <li class="mobile-dropdown">
+                    <a href="./industry.html">Industries</a>
+                </li>
+                <li>
+                    <a href="./product.html">Products</a>
+                </li>
+                <li>
+                    <a href="./events.html">Events</a>
+                </li>
+                <li>
+                    <a href="./tenders.html">Tenders</a>
+                </li>
+                <li>
+                    <a href="./finance.html">Financial Services</a>
+                </li>
+                <li>
+                    <a href="./news.html">News &amp; Updates</a>
+                </li>
+                <li>
+                    <a href="./market.html">Marketplace</a>
+                </li>
+                <li>
+                    <a href="./academia.html">Academia</a>
+                </li>
+            </ul>
+
+            <div>
+                <a href="./profile.html">
+                    <button class="header-button mob-ham-btn">Profile</button>
+                </a>
+            </div>
+            <div>
+                <a href="">
+                    <button class="header-button mob-ham-btn">Logout</button>
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="content">
+
+        <div class="black-background-top gray-background-small-container">
+            <ul class="list-profile-aero">
+                <li class="black-background-aero">
+                    <a href="./academia.html">Academia</a>
+                </li>
+                <li class="black-background-aero">
+                    <a href="./student-profile-list.html">Student Profiles </a>
+                </li>
+                <li>
+                    <a>Post your profile</a>
+                </li>
+            </ul>
+
+            <h6 class="twenty-two">
+                Post your Profile
+            </h6>
+        </div>
+
+        <div class="list-profile-container">
+            <div class="two-column-inputs two-column-input-space">
+
+                <div class="focus left-right-input left-input">
+                    <span class="up-input-text">
+                            First Name
+                    </span>
+                    <span>
+                        <input class="text-field unremoved-input-line" type="text" placeholder="">
+                    </span>
+                    <span class="underline"></span>
+                </div>
+
+                <div class="focus left-right-input right-input">
+                    <span class="up-input-text">
+                            First Name
+                    </span>
+                    <span>
+                        <input class="text-field unremoved-input-line" type="text" placeholder="">
+                    </span>
+                    <span class="underline"></span>
+                </div>
+            </div>
+
+            <div class="two-column-inputs two-column-input-space">
+
+                <div class="focus left-right-input left-input">
+                    <span class="up-input-text">
+                            Industry
+                    </span>
+                    <select>
+                            <option value = "" disabled selected>Select your Industry</option>
+                            <option value = "1">Rahul Rahul Rahul Rahul</option>
+                            <option value = "2">Rahul Rahul Rahul Rahul</option>
+                            <option value = "4">Rahul Rahul Rahul Rahul</option>
+                            <option value = "1">Rahul Rahul Rahul Rahul</option>
+                            <option value = "2">Rahul Rahul Rahul Rahul</option>
+                    </select>
+                </div>
+
+                <div class="focus left-right-input right-input">
+                    <span class="up-input-text">
+                            Years of Experience
+                        </span>
+                    <select>
+                                <option value = "" disabled selected>Select your Industry</option>
+                                <option value = "1">Rahul Rahul Rahul Rahul</option>
+                                <option value = "2">Rahul Rahul Rahul Rahul</option>
+                                <option value = "4">Rahul Rahul Rahul Rahul</option>
+                                <option value = "1">Rahul Rahul Rahul Rahul</option>
+                                <option value = "2">Rahul Rahul Rahul Rahul</option>
+                        </select>
+                </div>
+            </div>
+
+
+            <div class="two-column-inputs two-column-input-space">
+                <div class="left-right-input right-input">
+                    <span class="up-input-text">
+                            Your Skills
+                    </span>
+                    <div class="focus add-more-input">
+                        <span>
+                            <input class="text-field unremoved-input-line" type="text" placeholder="Skill 01">
+                        </span>
+                        <span class="underline"></span>
+                    </div>
+
+                    <div class="focus add-more-input added">
+                        <span>
+                            <input class="text-field unremoved-input-line" type="text" placeholder="Skill 02">
+                        </span>
+                        <span class="underline"></span>
+                    </div>
+
+                    <div>
+                        <p class="add-input">
+                            + Add another Skill
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="two-column-inputs two-column-input-space">
+
+                <div class="focus left-right-input right-input">
+                    <span class="up-input-text">
+                            Upload Your Resume
+                        </span>
+                    <div class="upload-file-border">
+                        <div class="background-input-upload">
+                            <div class="input-file-icon">
+                                <div class="flex input-default">
+                                    <!-- <span class="drop-file-icon">
+                                        <img src="./assets/icons/drop.svg" alt="">
+                                    </span> -->
+                                    <span class="drop-file-icon">
+                                        Upload your resume
+                                    </span>
+                                    <span class="file-choose">
+                                        <input class="input-file" type="file">
+                                        <span>choose file</span>
+                                    </span>
+                                </div>
+                                <div class="uploaded flex input-default">
+                                    <span class="drop-file-icon">
+                                            <img src="./assets/icons/drop.svg" alt="">
+                                        </span>
+                                    <span class="drop-file-icon">
+                                            Drop your file here to upload or 
+                                        </span>
+                                    <span class="file-choose">
+                                            <img src="./assets/icons/x.svg" alt="">
+                                        </span>
+                                </div>
+                                <div class="file-upload-filename">
+
+                                </div>
+                            </div>
+                        </div>
+                        <p class="file-type">
+                            File Types: JPEG, PNG or PDF. Max File Size: 10 MB
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center;">
+                <button class="outline-filter-btn border-btn outer-hov">
+                        Submit Request
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-menus-container">
+                <ul class="footer-menus footer-content">
+                    <li>
+                        <a href="./about.html">About us</a>
+                    </li>
+                    <li>
+                        <a href="./contact.html">Contact us</a>
+                    </li>
+                    <li>
+                        <a href="./faq.html">FAQ</a>
+                    </li>
+                    <li>
+                        <a href="./copyright.html">Copyright</a>
+                    </li>
+                    <li>
+                        <a href="./sitemap.html">Sitemap</a>
+                    </li>
+                    <li>
+                        <a href="./privacy.html">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="./terms.html">Terms of use</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-input-address">
+                <div class="footer-content footer-input">
+                    <form action="">
+                        <p>
+                            To get updates, sign up for our newsletter
+                        </p>
+
+                        <div class="footer-input-btn">
+                            <input type="text" required>
+                            <button class="outer-hov">
+                                    Sign up
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <address class="address footer-content">
+                            <p>
+                                Address:
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing, elit, sed diam 122998
+                            </p>
+                        </address>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js "></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js "></script>
+    <script src="./js/index.js "></script>
+</body>
+
+</html>

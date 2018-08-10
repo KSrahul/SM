@@ -1,0 +1,5185 @@
+body,
+html {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    /* font-family: SiemensSans-bold !important; */
+    /* overflow-x: hidden; */
+}
+
+.loader {
+    opacity: 0;
+    /* transition: 0.6s; */
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.loader.remove {
+    opacity: 1;
+    transition: 0.9s;
+    pointer-events: unset;
+}
+
+
+/* Loader */
+
+#loader.removeLoaded {
+    display: none;
+}
+
+#loader {
+    bottom: 0;
+    height: 175px;
+    left: 0;
+    margin: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 175px;
+    z-index: 99;
+}
+
+#loader .dot {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 87.5px;
+}
+
+#loader .dot::before {
+    border-radius: 100%;
+    content: "";
+    height: 87.5px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: scale(0);
+    width: 87.5px;
+}
+
+#loader .dot:nth-child(7n+1) {
+    transform: rotate(45deg);
+}
+
+#loader .dot:nth-child(7n+1)::before {
+    animation: 0.8s linear 0.1s normal none infinite running load;
+    background: #00ff80 none repeat scroll 0 0;
+}
+
+#loader .dot:nth-child(7n+2) {
+    transform: rotate(90deg);
+}
+
+#loader .dot:nth-child(7n+2)::before {
+    animation: 0.8s linear 0.2s normal none infinite running load;
+    background: #00ffea none repeat scroll 0 0;
+}
+
+#loader .dot:nth-child(7n+3) {
+    transform: rotate(135deg);
+}
+
+#loader .dot:nth-child(7n+3)::before {
+    animation: 0.8s linear 0.3s normal none infinite running load;
+    background: #00aaff none repeat scroll 0 0;
+}
+
+#loader .dot:nth-child(7n+4) {
+    transform: rotate(180deg);
+}
+
+#loader .dot:nth-child(7n+4)::before {
+    animation: 0.8s linear 0.4s normal none infinite running load;
+    background: #0040ff none repeat scroll 0 0;
+}
+
+#loader .dot:nth-child(7n+5) {
+    transform: rotate(225deg);
+}
+
+#loader .dot:nth-child(7n+5)::before {
+    animation: 0.8s linear 0.5s normal none infinite running load;
+    background: #2a00ff none repeat scroll 0 0;
+}
+
+#loader .dot:nth-child(7n+6) {
+    transform: rotate(270deg);
+}
+
+#loader .dot:nth-child(7n+6)::before {
+    animation: 0.8s linear 0.6s normal none infinite running load;
+    background: #9500ff none repeat scroll 0 0;
+}
+
+#loader .dot:nth-child(7n+7) {
+    transform: rotate(315deg);
+}
+
+#loader .dot:nth-child(7n+7)::before {
+    animation: 0.8s linear 0.7s normal none infinite running load;
+    background: magenta none repeat scroll 0 0;
+}
+
+#loader .dot:nth-child(7n+8) {
+    transform: rotate(360deg);
+}
+
+#loader .dot:nth-child(7n+8)::before {
+    animation: 0.8s linear 0.8s normal none infinite running load;
+    background: #ff0095 none repeat scroll 0 0;
+}
+
+
+/* #loader .lading {
+    background-image: url("../images/loading.gif");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    bottom: -40px;
+    height: 20px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    width: 180px;
+} */
+
+@keyframes load {
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+@keyframes load {
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+
+/* Loader */
+
+@font-face {
+    font-family: 'SiemensSans-Roman';
+    src: url('../assets/fonts/Siemens Sans Font/SiemensSans-Roman.otf');
+}
+
+@font-face {
+    font-family: 'SiemensSans-Bold';
+    src: url('../assets/fonts/Siemens Sans Font/SiemensSans-Bold.otf');
+}
+
+.closelocation {
+    background-image: url(../assets/icons/crossLocation.svg);
+    height: 10px;
+    width: 10px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin: 0px 10px;
+    margin-right: 0;
+    cursor: pointer;
+}
+
+
+/* Standar CSS */
+
+img {
+    max-width: inherit !important;
+}
+
+input,
+button {
+    outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+    padding: 0;
+    list-style-type: none;
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+}
+
+a {
+    color: inherit !important;
+    text-decoration: none;
+    background-color: inherit !important;
+}
+
+textarea,
+a:focus,
+a:hover {
+    text-decoration: none !important;
+    outline: 0px auto -webkit-focus-ring-color !important;
+    color: inherit !important;
+}
+
+
+/* Standar CSS */
+
+
+/* In search field city selecting */
+
+.citiesSelected {
+    display: flex;
+    padding-top: 7px;
+    flex-wrap: wrap;
+}
+
+.selectedlocation.hide-cities {
+    display: none;
+}
+
+
+/* .selectedlocation.active {
+    display: none;
+} */
+
+.citiesSelected li {
+    background-color: #ecf0f1;
+    font-family: SiemensSans-Roman;
+    font-size: 15px;
+    color: #474a4f;
+    padding: 7px 8px;
+    display: flex;
+    align-items: center;
+    line-height: normal;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+
+/* In search field city selecting */
+
+
+/* Spacing From top For All the Pages */
+
+.content {
+    margin-top: 72px;
+}
+
+
+/* Spacing From top For All the Pages */
+
+
+/* For Search Result */
+
+.no-search-container {
+    padding-bottom: 24%;
+}
+
+.no-search-link {
+    font-family: SiemensSans-bold;
+    color: #00999a;
+}
+
+.no-result-text {
+    font-family: SiemensSans-bold;
+    color: #474a4f;
+}
+
+.no-search-para {
+    font-family: SiemensSans-Roman;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: left;
+    color: #b3b3b3;
+}
+
+.no-search-space {
+    padding-bottom: 15px;
+}
+
+.search-end {
+    font-family: SiemensSans-Roman;
+    font-size: 18px;
+    letter-spacing: -0.1px;
+    text-align: center;
+    color: #b3b3b3;
+    padding-bottom: 28px;
+}
+
+.no-search p:last-child {
+    padding-bottom: 0;
+}
+
+.search-para {
+    padding-top: 16px;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.search-para-heading {
+    border-bottom: 1px solid;
+}
+
+.page-heading-border {
+    border-bottom: 2px solid;
+}
+
+.no-flex {
+    display: block !important;
+}
+
+.search-result-page-heading {
+    font-family: SiemensSans-bold;
+    font-size: 18px;
+    line-height: 1.22;
+    color: #000000;
+}
+
+.result-icon {
+    padding-right: 14px;
+}
+
+.search-result-heading {
+    font-family: SiemensSans-bold;
+    font-size: 18px;
+    letter-spacing: -0.1px;
+    color: #7a99a9;
+}
+
+.search-bottom-border {
+    display: flex;
+    padding: 18px 2%;
+    border-bottom: 1px solid #cecece;
+}
+
+.search-result-border {
+    border: 1px solid #cecece;
+    margin-bottom: 24px;
+}
+
+.search-result-container {
+    padding: 30px 3%;
+}
+
+.searched-result-heading {
+    font-size: 13px;
+    line-height: 1.69;
+    color: #474a4f;
+}
+
+.result-count-name {
+    font-family: SiemensSans-bold;
+}
+
+.search-gray {
+    opacity: 0.9;
+    background-color: #ecf0f1;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 3%;
+}
+
+.highlited-search {
+    border-bottom: 2px solid;
+}
+
+
+/* Search Result End Here */
+
+
+/* For Header CSS */
+
+.header.active {
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .14), 0 3px 3px -2px rgba(0, 0, 0, .2), 0 1px 8px 0 rgba(0, 0, 0, .12);
+}
+
+.header {
+    transition: 0.4s;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    background-color: #fff;
+    height: 72px;
+    justify-content: space-between;
+    display: flex;
+    bottom: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    flex: 1;
+}
+
+.logo {
+    padding: 14px 1%;
+}
+
+.menus-signing {
+    display: flex;
+    justify-content: flex-end;
+    transition: 0.4s;
+    /* display: none; */
+    /* flex: 1; */
+    padding: 0px 1.7%;
+    width: 64%;
+}
+
+.post-menus {
+    padding: 0px 0% 0% 7%;
+}
+
+.post-menus .nav-search .menus {
+    padding-right: 1%;
+}
+
+.nav-search {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.post-login-nav {
+    width: 71%;
+    padding-left: 9%;
+}
+
+.menus {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex: 1;
+    padding-right: 6%;
+}
+
+.menus li {
+    display: flex;
+    letter-spacing: -0.1px;
+    cursor: pointer;
+    position: relative;
+    align-items: center;
+    color: #474a4f;
+    font-family: SiemensSans-Roman;
+    font-size: 13px;
+}
+
+.search-cont {
+    align-items: center;
+    display: flex;
+}
+
+
+/* For Header Industries Dropdown CSS */
+
+.industries-menus {
+    position: absolute;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px 1px rgba(146, 146, 146, 0.33);
+    width: 200px;
+    top: 100%;
+    transition: 0.4s;
+    opacity: 0;
+    display: none;
+}
+
+.industries-dropdown:hover .industries-menus {
+    opacity: 1;
+    display: block;
+}
+
+.industries-menus::before {
+    content: "";
+    position: absolute;
+    bottom: calc(100% - 6px);
+    left: 16px;
+    width: 12px;
+    height: 12px;
+    background-color: #ffff;
+    transform: rotate(134deg);
+    z-index: -1;
+    box-shadow: 0 1px 3px 1px rgba(146, 146, 146, 0.33);
+}
+
+.industries-menus li {
+    display: flex;
+    width: 100%;
+    padding-right: 0;
+    border-bottom: 1px solid #dce3e8;
+    padding: 14px 14px;
+    color: #70757d;
+}
+
+.industries-menus li:hover {
+    color: #00999a;
+}
+
+
+/* Header Industries Dropdown End Here */
+
+
+/* For Header Buttons CSS */
+
+.header-btns-container {
+    display: flex;
+    width: 25%;
+    justify-content: flex-end;
+}
+
+.header-button {
+    background-color: #dce3e8;
+    border: none;
+    outline: none;
+    width: 100%;
+    letter-spacing: -0.1px;
+    text-align: center;
+    color: #00999a;
+    cursor: pointer;
+    height: 100%;
+    font-family: SiemensSans-bold;
+    padding: 0;
+    font-size: 13px;
+}
+
+.header-individual-btn {
+    width: 50%;
+}
+
+.header-right-btn {
+    background-color: #00999a;
+    color: #ffffff;
+}
+
+
+/* Header Buttons End Here */
+
+
+/* For Search Bar CSS */
+
+.search-icon {
+    cursor: pointer;
+}
+
+.search-main {
+    width: 0%;
+    position: absolute;
+    right: 0;
+    padding-top: 14px;
+    padding-right: 66px;
+    opacity: 0;
+    top: 0;
+    right: -100%;
+}
+
+.search-main.active {
+    display: block;
+    opacity: 1;
+    top: 0;
+    transition: 0.4s;
+    width: 87%;
+    right: 0;
+}
+
+.input-search.active:focus {}
+
+.search-type-container {
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.input-search {
+    width: 100%;
+    /* height: 45px; */
+    padding: 8px 43px;
+    border: 1px solid #dce3e8;
+    font-family: SiemensSans-Roman;
+    font-size: 20px;
+    letter-spacing: -0.1px;
+    text-align: left;
+    color: #000000;
+}
+
+::-webkit-input-placeholder {
+    font-family: SiemensSans-Roman;
+    font-size: 16px;
+    letter-spacing: -0.1px;
+    text-align: left;
+    color: #d1d4d9;
+}
+
+.input-search:focus {
+    border: 1px solid #00999a;
+}
+
+.btns-menus.active {
+    display: none;
+}
+
+.search-cross {
+    position: absolute;
+}
+
+.search-input {
+    left: 13px;
+    top: 11px;
+}
+
+.search-cross-icon {
+    right: 13px;
+    top: 11px;
+    cursor: pointer;
+}
+
+
+/* Search Bar CSS End Here*/
+
+
+/* For Header Menu Transition */
+
+.jump {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: #00999a;
+    opacity: 0;
+    transition: 0.4s;
+    top: 0;
+}
+
+.top {
+    transform: translateY(27px);
+}
+
+.bottom {
+    transform: translateY(41px);
+}
+
+.menus li a:hover .jump {
+    opacity: 1 !important;
+}
+
+.menus li a:hover .top {
+    transform: translateY(20px);
+}
+
+.menus li a:hover .bottom {
+    transform: translateY(48px);
+}
+
+
+/* Header Menu Transition End Here */
+
+
+/* For Home Slider CSS */
+
+.small-slide {
+    display: none;
+}
+
+.home-slider-text {
+    padding: 0px 8.4%;
+    width: 38%;
+    float: left;
+}
+
+.home-slider-text p {
+    padding: 20px 0px;
+}
+
+.sixteen {
+    font-family: SiemensSans-Roman;
+    font-size: 16px;
+    line-height: 1.38;
+    color: #424242;
+}
+
+.fill-btn {
+    background-color: #00999a;
+    border: solid 1px #00999a;
+    width: 50%;
+    font-family: SiemensSans-Roman;
+    font-size: 14px;
+    letter-spacing: -0.1px;
+    color: #ffffff;
+    outline: none;
+    height: 40px;
+}
+
+.carousel-aero {
+    background-image: none !important;
+}
+
+.carousel-control {
+    width: auto !important;
+    top: 41% !important;
+}
+
+.carousel-indicators .active {
+    width: 10px !important;
+    height: 10px !important;
+    background-color: #00999a !important;
+    border: 0 !important;
+}
+
+.carousel-indicators li {
+    width: 10px !important;
+    height: 10px !important;
+    margin: 0px !important;
+    cursor: pointer;
+    margin-left: 10px !important;
+}
+
+
+/* Carousel Styles */
+
+.carousel-indicators .active {
+    background-color: #2980b9;
+}
+
+.carousel-inner img {
+    width: 100%;
+}
+
+.carousel-control {
+    width: 0;
+}
+
+.carousel-control.left,
+.carousel-control.right {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    background-image: none;
+    background-repeat: no-repeat;
+    text-shadow: none;
+}
+
+.carousel-inner {
+    cursor: pointer;
+}
+
+.carousel:hover .carousel-aero {
+    display: block !important;
+    padding: 0 !important
+}
+
+.carousel-control .glyphicon-chevron-left,
+.carousel-control .glyphicon-chevron-right,
+.carousel-control .icon-prev,
+.carousel-control .icon-next {
+    position: absolute;
+    top: 45%;
+    z-index: 5;
+    display: inline-block;
+}
+
+.carousel-control .glyphicon-chevron-left,
+.carousel-control .icon-prev {
+    left: 0;
+}
+
+.carousel-control .glyphicon-chevron-right,
+.carousel-control .icon-next {
+    right: 0;
+}
+
+.carousel-control.left span,
+.carousel-control.right span {
+    background-color: #000;
+}
+
+.carousel-control.left span:hover,
+.carousel-control.right span:hover {
+    opacity: .7;
+    filter: alpha(opacity=70);
+}
+
+.header-text {
+    position: absolute;
+    top: 31.5%;
+    right: auto;
+    width: 100%;
+    color: #fff;
+}
+
+.header-text h2 {
+    font-size: 40px;
+}
+
+.header-text h2 span {
+    padding: 10px;
+}
+
+.header-text h3 span {
+    background-color: #000;
+    padding: 15px;
+}
+
+.btn-min-block {
+    min-width: 170px;
+    line-height: 26px;
+}
+
+.btn-theme {
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid #fff;
+    margin-right: 15px;
+}
+
+.btn-theme:hover {
+    color: #000;
+    background-color: #fff;
+    border-color: #fff;
+}
+
+
+/* Home Slider End Here */
+
+.doon-ham {
+    padding: 18.5px 22px;
+    z-index: 102;
+}
+
+.hamburger-search {
+    display: none;
+}
+
+.flex-ham-icons {
+    display: flex;
+    height: 100%;
+}
+
+.flex-ham-icons.active {
+    display: none;
+}
+
+.doon-ham-link span {
+    display: block;
+    background-color: #00999a;
+    height: 3px;
+    width: 30px;
+    position: relative;
+    transition: 0.5s;
+}
+
+.doon-ham-link {
+    display: block;
+    height: 25px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    transition: 0.5s;
+}
+
+.doon-ham-link.active {
+    transform: translateX(11px);
+}
+
+.doon-ham-link.active :nth-child(1) {
+    /* width: 18px; */
+    /* width: 34px; */
+    /* transform: rotateZ(45deg) translateY(-8px) translateX(13px); */
+    transform: rotate(135deg) translateY(0px) translateX(13px)
+}
+
+.doon-ham-link.active :nth-child(2) {
+    transform: translateX(-44px);
+    opacity: 0;
+}
+
+.doon-ham-link.active :nth-child(3) {
+    /* width: 18px; */
+    /* width: 34px; */
+    /* transform: rotateZ(-45deg) translateY(8px) translateX(12px); */
+    transform: rotate(-135deg) translateY(0px) translateX(12px)
+}
+
+.doon-ham-link :nth-child(2) {
+    top: 6px;
+}
+
+.doon-ham-link :nth-child(3) {
+    top: 12px;
+}
+
+.doon-slide-menus {
+    display: none;
+    position: fixed;
+    width: 100%;
+    right: 0;
+    background-color: #fff;
+    top: 0;
+    height: 100%;
+    transform: translate(100%);
+    transition: 0.6s;
+    z-index: 101;
+    text-align: center;
+    overflow: scroll;
+}
+
+.doon-slide-menus.active {
+    transform: translate(0%);
+}
+
+.ham-menus li {
+    font-family: SiemensSans-Roman;
+    font-size: 26px;
+    letter-spacing: -0.1px;
+    color: #474A4F;
+    font-weight: bolder;
+    padding: 11px 0px;
+}
+
+.ham-menus li:hover {
+    color: black;
+    font-weight: bolder;
+}
+
+.mob-ham-btn {
+    background-color: #fff;
+    font-size: 26px;
+    padding: 11px 0px;
+}
+
+.ham-menus {
+    padding-top: 50px;
+    border-bottom: 2px solid #cecece;
+    padding-bottom: 11px;
+    margin-bottom: 23px !important;
+}
+
+
+/* Hamburger Menus End Here */
+
+
+/* Header CSS End Here */
+
+
+/* Home Joing Community CSS */
+
+.joining-community {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -6px;
+    padding-top: 56px;
+}
+
+.joining-community-indiv {
+    width: 25%;
+    padding: 0px 3.4%;
+}
+
+.joining-community-section {
+    padding: 50px 0px;
+    padding-left: 5%;
+}
+
+.twenty-two {
+    font-family: SiemensSans-bold;
+    font-size: 22px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.community-para {
+    padding-top: 42px;
+}
+
+.community-para h5 {
+    font-family: SiemensSans-bold;
+    font-size: 13px;
+    font-weight: 900;
+    line-height: 1.46;
+    color: #000000;
+    padding-bottom: 5px;
+}
+
+.community-para p {
+    font-family: SiemensSans-Roman;
+    font-size: 13px;
+    line-height: 1.31;
+    color: #424242;
+}
+
+
+/* Home Joing Community CSS End Here */
+
+
+/* Home Service Section CSS */
+
+.service-grey-heading {
+    padding-bottom: 35px;
+}
+
+.half-grids-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.our-service-grey {
+    background-color: #ecf0f1;
+    padding: 90px 7.3%;
+    width: 50%;
+}
+
+.service-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.half-grids-links:hover .service-img-box img {
+    transform: scale(1.1);
+    /* filter: grayscale(100%); */
+}
+
+.half-grids-links:hover .service-underline,
+.hov-underline:hover .service-underline {
+    width: 100%;
+    transition: 0.4s;
+}
+
+.half-grid {
+    width: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.5s;
+    position: relative;
+}
+
+.half-grids-imgtext {
+    display: flex;
+    width: 50%;
+    flex-wrap: wrap;
+}
+
+.half-grids-links {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.mob-display {
+    display: none;
+}
+
+.white-grid-box {
+    background-color: #fff;
+    transition: 0.5s;
+    padding: 50px 9% 50px 9%;
+}
+
+.service-top-line {
+    border-top: 2px solid #cecece;
+}
+
+.white-grid-box h6 {
+    font-family: SiemensSans-bold;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.22;
+    text-align: left;
+    color: #00999a;
+}
+
+.white-grid-box p {
+    font-family: SiemensSans-Roman;
+    font-size: 16px;
+    line-height: 1.38;
+    text-align: left;
+    color: #545454;
+    /* float: left; */
+}
+
+.white-grid-box h6 {
+    padding-bottom: 30px;
+}
+
+.service-more-link {
+    color: #000000 !important;
+}
+
+.service-underline {
+    display: block;
+    height: 2px;
+    /* background-color: #57d6d8; */
+    background-color: #00999a;
+    width: 0%;
+}
+
+.grid-para {
+    padding-top: 30px;
+    padding-bottom: 60px;
+}
+
+.column-bottom-text {
+    position: absolute;
+    bottom: 30px;
+}
+
+
+/* Home Service Section End Here */
+
+
+/* For Footer Section */
+
+.outer-hov:hover {
+    background-color: #00999a;
+    color: #fff;
+    border: 1px solid #00999a;
+}
+
+.footer-menus {
+    column-count: 3;
+    column-fill: auto;
+    height: 94px;
+    width: 100%;
+}
+
+.footer-content li a:hover {
+    color: #00999a !important;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 6%;
+    justify-content: space-between;
+    background-color: #000000;
+}
+
+.footer-menus-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 37%;
+}
+
+.footer-input-address {
+    display: flex;
+    width: 63%;
+    justify-content: space-between;
+}
+
+.address {
+    width: 19%;
+    margin-bottom: 0;
+}
+
+.footer-input-btn {
+    padding-top: 12px;
+}
+
+.footer-input-btn input {
+    height: 38px;
+    width: 307px;
+    margin-right: 10px;
+    padding: 0px 10px;
+    color: #000000;
+    font-size: 16px;
+}
+
+.footer-input-btn input:focus {
+    border: 2px solid #00999a;
+}
+
+.footer-input-btn button {
+    border: solid 1px #00999a;
+    background-color: initial;
+    font-family: SiemensSans-Roman;
+    font-size: 10px;
+    text-align: center;
+    color: #ffffff;
+    padding: 11px 0px;
+    vertical-align: bottom;
+    width: 102px;
+    outline: none;
+}
+
+.footer-content * {
+    font-family: SiemensSans-Roman;
+    font-size: 11px;
+    text-align: left;
+    color: #ffffff;
+    padding: 8px 0px;
+}
+
+
+/* Footer Section End Here */
+
+
+/* Footer Pages CSS Start Here */
+
+
+/* For About Us Page */
+
+.about-banner img {
+    width: 100%;
+}
+
+.about-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about-row .half-grid {
+    cursor: default;
+}
+
+.about-grid-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-grid-box {
+    padding-top: 90px;
+}
+
+.about-grid-box h6 {
+    font-size: 22px;
+}
+
+.about-grey-container {
+    text-align: center;
+    background-color: #ecf0f1;
+    padding: 60px 0px;
+}
+
+.center-content {
+    padding: 30px 25%;
+    font-family: SiemensSans-bold;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.41;
+    text-align: center;
+    color: #474a4f;
+}
+
+.border-btn {
+    border: solid 1px #00999a;
+    background-color: #ecf0f1;
+    height: 50px;
+    width: 220px;
+    font-family: SiemensSans-Roman;
+    font-size: 14px;
+    letter-spacing: -0.1px;
+    text-align: center;
+    color: #00999a;
+    padding: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+.submit-btn {
+    border: solid 1px #00999a;
+    background-color: #fff;
+}
+
+.contact-submit {
+    padding-top: 16px;
+}
+
+
+/* About Us Page End Here*/
+
+
+/* For Contact Us Page */
+
+.text-field {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #d1d4d9;
+    width: 100%;
+    color: #70757d;
+}
+
+.text-field.active {
+    border: none
+}
+
+.contact-spacing-container {
+    padding: 50px 7%;
+    border-bottom: 2px solid #cecece;
+    padding-right: 18%;
+}
+
+.black-background-top {
+    background-color: #000000;
+    padding: 30px 1.7%;
+    opacity: 0.9;
+}
+
+.black-background-top h6 {
+    color: #ffffff;
+}
+
+.contact-us-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact-left-container {
+    width: 41%;
+    background-color: #ecf0f1;
+}
+
+.contact-right-container {
+    width: 59%;
+    padding: 50px 9.4%;
+    padding-bottom: 120px;
+}
+
+.contact-address {
+    padding-top: 30px;
+    border: none;
+}
+
+.contact-spacing-container h6 {
+    color: #00999a;
+    padding-bottom: 15px;
+}
+
+.contact-address-text {
+    padding-bottom: 29px;
+}
+
+.address-contact h6 {
+    color: #474a4f;
+}
+
+.contact-left-icon {
+    padding-right: 6px;
+}
+
+.radio-btn {
+    display: flex;
+}
+
+.contact-input-container {
+    padding-top: 43px;
+}
+
+.contact-input-fields {
+    padding-bottom: 54px;
+}
+
+.up {
+    position: absolute;
+    top: 1px;
+    pointer-events: none;
+    font-family: SiemensSans-Roman;
+    font-size: 16px;
+    text-align: left;
+    color: #70757d;
+    transition: 0.3s;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.up.active {
+    top: -24px;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: left;
+    color: #000000;
+    font-family: SiemensSans-bold;
+}
+
+.focus {
+    position: relative;
+}
+
+.underline.active {
+    width: 100%;
+}
+
+.underline {
+    transition: 0.5s;
+    position: absolute;
+    background-color: #00999a;
+    width: 0%;
+    height: 2px;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+}
+
+.input-fields.active {
+    border: none
+}
+
+.contact-main-input {
+    padding: 50px 0px;
+}
+
+.input-submit {
+    padding: 50px 0px;
+}
+
+@keyframes ripple {
+    0% {
+        box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.0);
+    }
+    50% {
+        box-shadow: 0px 0px 0px 15px rgba(0, 0, 0, 0.1);
+    }
+    100% {
+        box-shadow: 0px 0px 0px 15px rgba(0, 0, 0, 0);
+    }
+}
+
+.md-radio.md-radio-inline {
+    display: inline-block;
+}
+
+.md-radio input[type="radio"] {
+    display: none;
+}
+
+.md-radio input[type="radio"]:checked+label:before {
+    border-color: #00999a;
+    animation: ripple 0.2s linear forwards;
+}
+
+.md-radio input[type="radio"]:checked+label:before label {}
+
+.md-radio input[type="radio"]:checked+label:after {
+    transform: scale(1.4);
+}
+
+.md-radio label {
+    display: inline-block;
+    height: 20px;
+    position: relative;
+    padding: 0 25px;
+    margin-bottom: 0;
+    cursor: pointer;
+    vertical-align: bottom;
+}
+
+.md-radio {
+    padding-right: 82px;
+}
+
+.md-radio label:before,
+.md-radio label:after {
+    position: absolute;
+    content: '';
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    transition-property: transform, border-color;
+}
+
+.md-radio label:before {
+    left: 0;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(0, 0, 0, 0.54);
+}
+
+.md-radio label:after {
+    top: 5px;
+    left: 5px;
+    width: 6px;
+    height: 6px;
+    transform: scale(0);
+    background: #00999a;
+}
+
+
+/* Contact Us End Here */
+
+
+/* For Terms of use Page */
+
+.border-container {
+    border: 48px solid #ecf0f1;
+    padding: 50px 5.6%;
+    padding-right: 12%;
+    border-top: 35px solid #ecf0f1;
+}
+
+.footer-same-heading {
+    font-family: SiemensSans-bold;
+    font-weight: bold;
+}
+
+.footer-same-layout h6 {
+    font-family: SiemensSans-bold !important;
+    font-weight: bold;
+    padding-bottom: 28px;
+}
+
+.footer-same-layout h6,
+p {
+    font-family: SiemensSans-Roman;
+    font-size: 16px;
+    line-height: 1.38;
+    color: #424242;
+}
+
+.footer-same-layout p {
+    padding-bottom: 40px;
+}
+
+
+/* Terms of use Page End Here  */
+
+
+/* For Sitemap CSS */
+
+.sitemap-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.meni-sitemap-heading li:first-child {
+    font-family: SiemensSans-bold;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: -0.1px;
+    color: #474a4f;
+    padding-bottom: 20px;
+}
+
+.meni-sitemap-heading li:last-child {
+    padding-bottom: 0 !important;
+}
+
+.meni-sitemap-heading {
+    padding-bottom: 44px;
+}
+
+.meni-sitemap-heading li a {
+    font-family: SiemensSans-Roman;
+    font-size: 16px;
+    letter-spacing: -0.1px;
+    text-align: left;
+    color: #424242;
+    padding-bottom: 10px;
+    display: block;
+}
+
+.footer-sitemap li:first-child {
+    color: #7a99a9;
+}
+
+.sitemap-last {
+    padding-right: 48px;
+}
+
+
+/* For Sitemap CSS End Here */
+
+
+/* faq CSS Start Here */
+
+.accordion-spacing {
+    padding: 26px 4.7%;
+}
+
+.accordion-content-space {
+    padding-top: 2px;
+}
+
+.tab-panel {
+    box-shadow: none !important;
+    border-left: 0 !important;
+    border-top: 0 !important;
+    border-radius: 0px !important;
+    border-bottom: 1px solid #cecece !important;
+    margin-bottom: 0 !important;
+}
+
+.faq-panel-heading.active {
+    color: #000000;
+}
+
+.marketplace-panel-heading>a.active {
+    color: #000000 !important;
+    font-weight: bold;
+}
+
+.accordion-panel-heading {
+    font-family: SiemensSans-bold;
+    font-size: 16px;
+    font-weight: bold;
+    color: #474a4f;
+}
+
+.panel-group .panel-heading a {
+    display: block;
+    text-decoration: none;
+    position: relative;
+}
+
+.minus:after {
+    content: "";
+    float: right;
+    background-image: url(../assets/icons/minus.svg);
+    height: 3px;
+    width: 15px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.plus.collapsed:after {
+    content: "";
+    background-image: url(../assets/icons/plus.svg);
+    height: 17px;
+    width: 16px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.tabs-faq {
+    padding-left: 0%;
+    padding-right: 0%;
+    padding-top: 26px;
+    padding-bottom: 150px;
+    border-top: 30px solid #ecf0f1;
+    border-bottom: 30px solid #ecf0f1;
+}
+
+
+/* faq CSS End Here */
+
+
+/* Footer Pages CSS End Here */
+
+
+/* For Modal Pop-Up CSS */
+
+.modal-backdrop {
+    background-color: #7d7d7d !important;
+}
+
+.close-modal {
+    opacity: 1 !important;
+}
+
+
+/* For Modal Pop-Up CSS */
+
+.modal-dialog-one {
+    background-color: #fff;
+}
+
+
+/* For Login And SignUp Pop-Up CSS */
+
+[type="checkbox"].twelveCheck:not(:checked)+span:not(.lever):after {
+    width: 10px !important;
+    height: 10px !important;
+    border: 1px solid #7a99a9 !important;
+}
+
+[type="checkbox"].twelveCheck:checked+span:not(.lever):after {
+    width: 10px !important;
+    height: 10px !important;
+    border: 1px solid #00999a !important;
+}
+
+[type="checkbox"].twelveCheck:checked+span:not(.lever):before {
+    top: -2px !important;
+    left: 0px !important;
+    width: 4px !important;
+    height: 7px !important;
+    border-top: 1px solid transparent !important;
+    border-left: 1px solid transparent !important;
+    border-right: 1px solid #fff !important;
+    border-bottom: 1px solid #fff !important;
+    transform: rotateZ(43deg) !important;
+}
+
+.smallCheck-space {
+    padding-left: 17px !important;
+}
+
+.login-modal {
+    display: flex;
+}
+
+.modal-content {
+    box-shadow: 0 0px 0px 0px rgba(109, 109, 109, 0.54) !important;
+    border-radius: 0 !important;
+    border: none !important;
+    width: 50%;
+}
+
+.modal-body-login {
+    padding: 40px 50px !important;
+}
+
+.pop-up-heading {
+    text-align: center;
+    padding-bottom: 55px;
+}
+
+.login-field {
+    position: relative;
+    display: flex;
+    border-bottom: 1px solid #d1d4d9;
+}
+
+.login-field.active {
+    /* border-bottom: 0px solid #d1d4d9; */
+}
+
+.input-field-icon.active svg g path {
+    stroke: #474a4f;
+}
+
+.input-pop {
+    width: 100%;
+}
+
+.login-input {
+    border: none;
+    padding: 4px 7px;
+    height: 100%;
+    font-family: SiemensSans-Roman;
+    font-size: 14px;
+    line-height: 1.07;
+    text-align: left;
+    color: #474a4f;
+}
+
+.login-pop-up {
+    left: 20px;
+    bottom: 5px;
+    font-size: 15px;
+    color: #7a99a9;
+}
+
+.login-pop-up.active {
+    font-size: 12px;
+    color: #7a99a9;
+    left: 0;
+}
+
+.forgot-registered {
+    padding-top: 5px;
+    padding-bottom: 25px;
+}
+
+.forgot-registered span {
+    font-family: SiemensSans-Roman;
+    font-size: 12px;
+    line-height: 1.33;
+    text-align: center;
+    color: rgba(122, 153, 169, 0.52);
+}
+
+.login-more-pop a {
+    font-family: SiemensSans-bold !important;
+    font-weight: bold;
+    color: rgba(122, 153, 169, 0.52)
+}
+
+.login-pop-btn {
+    background-color: #00999a;
+    font-family: SiemensSans-Roman;
+    font-size: 14px;
+    letter-spacing: -0.1px;
+    text-align: center;
+    color: #ffffff;
+    width: 100%;
+    height: 50px;
+    border: none;
+}
+
+.registered-link {
+    padding-top: 30px;
+    padding-bottom: 0;
+    text-align: center;
+}
+
+.registered-link span,
+a {
+    color: #70757d;
+}
+
+.login-right-close {
+    padding: 15px 15px !important;
+    padding-bottom: 7px !important;
+}
+
+.modal-right-body {
+    padding: 8px 0px !important;
+}
+
+.login-right-img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.modal {
+    overflow-y: scroll !important;
+}
+
+
+/* For Login And SignUp Pop-Up CSS End Here */
+
+
+/* For SignUp Custom CSS */
+
+.modal-content-two {
+    width: 100%;
+    padding: 0px 20%;
+}
+
+.next-step-signup {
+    padding: 100px 20%;
+    text-align: center;
+}
+
+.signup-grey-text {
+    padding-top: 30px;
+    color: #7a99a9;
+}
+
+.signup-text-para {
+    color: #70757d;
+    padding: 30px 9%;
+}
+
+.calculate-btn {
+    font-size: 16px;
+}
+
+.signup-skip {
+    font-size: 14px;
+    color: #474a4f;
+    padding-top: 18px;
+    text-align: center;
+}
+
+.modal-header {
+    border: none !important;
+}
+
+.pop-up-heading p {
+    padding: 8px 0px;
+    color: #70757d;
+    text-align: center;
+}
+
+.login-icon-color.active {
+    stroke: red;
+}
+
+.pop-up-input-space {
+    margin-bottom: 51px;
+}
+
+.show-pass {
+    padding: 0;
+    margin: 0;
+}
+
+.check-text {
+    font-family: SiemensSans-Roman;
+    font-size: 12px;
+    line-height: 1.25;
+    color: #d1d4d9;
+}
+
+.skip-icon {
+    padding-left: 6px;
+}
+
+.not-skip-last {
+    display: flex;
+    padding: 100px 7%;
+}
+
+.not-skip-img {
+    padding-right: 6%;
+}
+
+.not-skip-last-para {
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+.not-skip-text {
+    padding: 30px 0px;
+}
+
+.understand-maturity {
+    font-family: SiemensSans-bold;
+    font-weight: bold;
+}
+
+.maturity-score {
+    padding-top: 23px;
+}
+
+.skip-text {
+    color: #474a4f;
+}
+
+.signup {
+    background-color: #fff;
+}
+
+.maturity-skip {
+    padding-bottom: 20px;
+}
+
+.modal-dialog-two {
+    height: 100%;
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+.modal-content-signup {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+}
+
+.pop-signup {
+    position: relative;
+    width: 100%;
+    margin-left: 48px;
+}
+
+.maturity-select {
+    padding-bottom: 27px;
+}
+
+.two-column-inputs :first-child {
+    margin-left: 0;
+}
+
+.signup-pop {
+    left: 0;
+    top: 0px;
+    font-weight: unset;
+}
+
+.maturity-label {
+    font-family: SiemensSans-Roman;
+    font-size: 12px;
+    line-height: 1.25;
+    text-align: left;
+    color: #7a99a9;
+    padding: 0;
+}
+
+.signup-pop.active {
+    font-size: 12px;
+    color: #7a99a9;
+}
+
+.carousel-signup li {
+    border: 1px solid #70757d !important;
+}
+
+.two-column-inputs {
+    display: flex;
+    width: 100%;
+}
+
+.pass-confirm-pop {
+    display: flex;
+    border-bottom: 1px solid #d1d4d9;
+}
+
+.confirm-pass-input {
+    border: none;
+}
+
+.password-restriction {
+    font-family: SiemensSans-Roman;
+    font-size: 12px;
+    line-height: 1.25;
+    text-align: left;
+    color: #70757d;
+    padding: 6px 0px
+}
+
+.two-pass {
+    position: relative;
+}
+
+.signup-input-fields {
+    color: #474a4f;
+    font-size: 14px;
+}
+
+.accept-terms-signup {
+    padding: 31px 0px;
+}
+
+.accept-check {
+    padding-bottom: 15px;
+}
+
+.accept-check-text {
+    color: #70757d;
+    font-weight: normal;
+}
+
+.accept-bold {
+    font-family: SiemensSans-bold;
+    color: #70757d;
+}
+
+.signup-pop-btn {
+    width: 52%;
+}
+
+.already-account {
+    padding-top: 10px;
+}
+
+.signup-main-btn {
+    text-align: center;
+}
+
+.signup-pagination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px 0px;
+}
+
+.signup-pagination li {
+    background-color: #fff;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid #70757d;
+    margin: 0px 8px;
+}
+
+.pagination-active {
+    background-color: #00999a !important;
+    border: 1px solid #00999a !important;
+}
+
+
+/* For SignUp Custom CSS */
+
+.show-text~input {
+    background: black
+}
+
+
+/* For Reset Password Pop-Up */
+
+.reset-popup {
+    padding-bottom: 30px;
+}
+
+.new-password-text {
+    text-align: center;
+    padding-bottom: 30px;
+    color: #70757d;
+}
+
+.new-password-text p {
+    font-family: SiemensSans-Roman;
+    font-size: 17px;
+    line-height: 1.07;
+    text-align: center;
+    color: #474a4f;
+}
+
+.reset-input-field {
+    /* padding: 0% 25%; */
+    text-align: center;
+}
+
+.space-input-btn {
+    margin-bottom: 40px;
+}
+
+.reset-btn {
+    width: 28%;
+}
+
+.reset-pass-btn {
+    text-align: center;
+}
+
+.focus-fifteen {
+    color: #7a99a9;
+    font-size: 15px
+}
+
+.focus-fifteen.active {
+    font-size: 12px;
+    color: #7a99a9;
+}
+
+.input-fifteen {
+    color: #474a4f;
+    font-size: 15px;
+}
+
+.user-account {
+    font-size: 13px;
+    color: #70757d;
+}
+
+.small-modal {
+    background-color: #fff;
+    top: 100px;
+}
+
+.small-modal-content {
+    width: 56%;
+    margin: 0 auto;
+    padding: 5px 3%;
+}
+
+.small-modal-bold {
+    text-align: center;
+    padding-bottom: 16px;
+}
+
+.popup-email-reset {
+    margin-bottom: 44px;
+}
+
+.align-user-select {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sub-mit-popup {
+    padding-bottom: 30px;
+}
+
+.btn-fifty {
+    height: 50px;
+}
+
+.small-space-btns {
+    padding-bottom: 10px;
+}
+
+
+/* Reset Password End Here */
+
+
+/* Deactivate account popup css */
+
+#deactivateHide {
+    cursor: pointer;
+}
+
+.deactivate-message-show {
+    opacity: 0.9;
+    background-color: #ffffff;
+    width: 100%;
+    padding: 18px 1% 17px 4%;
+    position: absolute;
+    z-index: 1;
+    transition: opacity 0.8s;
+}
+
+.deactivate-message-show.hide_Deactivation {
+    opacity: 0;
+}
+
+.deactivate-btns-top {
+    padding-top: 14px;
+}
+
+.password-must {
+    color: #999999 !important;
+    padding-top: 8px;
+}
+
+.center-modals {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px 0px;
+}
+
+.deactivate-grey-text {
+    color: #7a99a9;
+    padding-bottom: 50px;
+}
+
+.deactivate-img {
+    padding-bottom: 30px;
+}
+
+.deactivate-para {
+    padding-bottom: 16px;
+    color: #70757d;
+}
+
+.deactivate-message {
+    padding-bottom: 10px;
+}
+
+.deactivate-cross-text {
+    display: flex;
+    justify-content: space-between;
+}
+
+.half-modal {
+    background-color: #fff;
+}
+
+.update-pass-text {
+    padding-bottom: 16px;
+    text-align: center;
+}
+
+.enter-pass {
+    padding-bottom: 50px;
+    text-align: center;
+    color: #70757d;
+}
+
+.update-input-btns {
+    width: 67%;
+    margin: 0 auto;
+    padding-bottom: 45px;
+}
+
+.update-bottom {
+    padding-bottom: 45px;
+}
+
+
+/* Deactivate account popup css End Here */
+
+
+/* For Product Page CSS */
+
+.grid-main-col {
+    padding: 50px 7.3% 30px 7.3%;
+}
+
+.one-forty-btn {
+    width: 140px !important;
+}
+
+.accordion-anchor.active {
+    color: #70757d !important;
+}
+
+.navigation__link.active {
+    color: white !important;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.accordion-anchor {
+    cursor: pointer;
+}
+
+.sub-accordion {
+    padding: 13px 9%;
+    height: 242px;
+    transition: .4s;
+    overflow: hidden;
+}
+
+.sub-accordion.sub-accordion-close {
+    height: 0px;
+}
+
+.sub-accordion li {
+    font-family: SiemensSans-Roman;
+    font-size: 13px;
+    text-align: left;
+    color: #7a99a9;
+    padding-bottom: 12px;
+}
+
+.sub-accordion :last-child {
+    padding-bottom: 0;
+}
+
+.accordion-sub-detail {
+    color: #000000;
+    font-size: 15px;
+    padding-bottom: 16px;
+}
+
+.accordion-sub-detail-text {
+    border-bottom: 2px solid #000000;
+}
+
+.accordion-top-space {
+    padding-top: 50px;
+}
+
+
+/* Product Pages CSS End Here */
+
+
+/* For Filters */
+
+.filter-container-space {
+    background-color: #ecf0f1;
+    padding: 30px 3%;
+}
+
+.filter-container-space .filter-container {
+    margin-top: 0;
+}
+
+.filter-outer-space {
+    padding-bottom: 22px;
+}
+
+.product-internal-aero {
+    color: #000000 !important;
+}
+
+.internal-filter {
+    background-color: #fff;
+}
+
+.filter-container-align {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 22px;
+}
+
+.main-filter-space {
+    padding-bottom: 24px;
+}
+
+.filter-btn {
+    background-color: #00999a;
+    border: solid 1px #00999a;
+    font-family: SiemensSans-Roman;
+    font-size: 16px;
+    text-align: left;
+    color: #ffffff;
+    height: 36px;
+    padding: 0;
+    text-align: center;
+    width: 96px;
+    padding: 8px 0px;
+}
+
+.product-filter-img {
+    padding-left: 10px;
+}
+
+.filter-icon svg {
+    vertical-align: text-bottom;
+}
+
+.filter-icon.active svg g {
+    stroke: #ffff;
+}
+
+.filter-heading {
+    font-family: SiemensSans-bold;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: -0.1px;
+    text-align: left;
+    color: #000000;
+}
+
+.filter-container {
+    border: solid 1px #d1d4d9;
+    position: relative;
+    display: none;
+    margin-bottom: 18px;
+    margin-top: 22px;
+}
+
+.filter-container::before {
+    content: "";
+    border-bottom-color: rgba(234, 230, 230, 0.33);
+    right: 17px;
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    background: #fff;
+    transform: translateX(-27%) translateY(-1%) rotate(45deg);
+    border: 1px solid #d1d4d9;
+    border-bottom: 0;
+    border-right: 0;
+    top: -7.2px;
+}
+
+.filter-spacing {
+    padding: 15px 2%;
+}
+
+
+/* Filters End Her */
+
+
+/* Financial Services CSS Start Here */
+
+.table-responsive th,
+td {
+    width: 140px;
+}
+
+.financial-table-icon {
+    padding-right: 2px;
+}
+
+.financial-grey-container {
+    background-color: #ecf0f1;
+}
+
+.financial-spacing {
+    padding: 39px 11%;
+}
+
+.financial-contact {
+    font-family: SiemensSans-Roman;
+    font-size: 14px;
+    color: #00999a;
+}
+
+.financial-main {
+    font-family: SiemensSans-bold;
+    font-size: 14px;
+    color: #474a4f;
+    cursor: pointer;
+}
+
+.table td:last-child {
+    border-right: 0;
+}
+
+.table thead th {
+    font-family: SiemensSans-Roman;
+    font-size: 15px;
+    letter-spacing: -0.1px;
+    text-align: left;
+    color: #eeeff3;
+    background-color: #000000;
+    border-bottom: 0 !important;
+    border-right: 1px solid #fcfcfc;
+}
+
+.table-border tr :nth-child(-1n+4) {
+    height: 23px;
+    font-family: SiemensSans-Roman;
+    font-size: 16px;
+    letter-spacing: -0.2px;
+    text-align: -webkit-match-parent;
+    color: #1c1c1c;
+}
+
+.table-border {
+    border: 1px solid #ecf0f1;
+}
+
+.center tr th,
+td {
+    text-align: center;
+}
+
+.table-border tr :nth-child(-1n+3) {
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+}
+
+.table-border tr :nth-child(+1n+4) {
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+    font-size: 15px;
+    color: #474a4f;
+}
+
+.table-responsive th,
+td {
+    padding: 10px 2.5% !important;
+    font-family: SiemensSans-Roman;
+}
+
+.table tbody>tr:nth-child(even)>td,
+.table tbody>tr:nth-child(even)>th {
+    background-color: #ecf0f1;
+    border: solid 1px #ecf0f1;
+}
+
+
+/* Financial Services CSS End Here */
+
+
+/* Profile Page CSS Start Here */
+
+.profile-btn {
+    font-size: 13px;
+    position: relative;
+}
+
+.hi-user {
+    font-family: SiemensSans-Roman;
+    font-weight: normal;
+}
+
+.profile-btn-main {
+    width: 64%;
+}
+
+.search-post-icon {
+    justify-content: flex-end;
+    flex: 1;
+    padding-right: 16%;
+}
+
+.profile-aero {
+    float: right;
+    padding-right: 11%;
+    cursor: pointer;
+}
+
+.profile-drop-down {
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px 1px rgba(146, 146, 146, 0.33);
+    display: none;
+    position: relative;
+}
+
+.profile-drop-down.active {
+    display: block;
+}
+
+.profile-drop-down::before {
+    content: "";
+    bottom: calc(100% - 8px);
+    width: 16px;
+    height: 16px;
+    background-color: #ffff;
+    transform: rotate(134deg);
+    z-index: 0;
+    right: 24px;
+    position: absolute;
+    border-bottom-color: #111111;
+    display: block;
+}
+
+.profile-menus {
+    font-family: SiemensSans-Roman;
+    font-size: 13px;
+    letter-spacing: -0.1px;
+    text-align: left;
+    color: #70757d;
+    border-bottom: 1px solid #dce3e8;
+    padding: 14px 18%;
+}
+
+.profile-drop-img {
+    padding-right: 8px;
+}
+
+.profile-container {
+    display: flex;
+}
+
+.profile-left-container {
+    width: 24%;
+    background-color: #ecf0f1;
+    padding-bottom: 12px;
+}
+
+.user-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.user-img>img {
+    width: 100%
+}
+
+.profile-grey-container {
+    opacity: 0.9;
+    background-color: #ecf0f1;
+}
+
+.profile-right-container {
+    width: 76%;
+}
+
+.profile-edit-detail {
+    display: flex;
+    justify-content: space-between;
+    background-color: #000;
+    padding: 15px 2%;
+}
+
+.profile-edit-heading {
+    font-family: SiemensSans-bold;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: -0.1px;
+    text-align: left;
+    color: #ffffff;
+}
+
+.personal-img-detail {
+    padding-right: 13px;
+}
+
+.personal-data {
+    display: flex;
+    padding: 30px 11%;
+    flex-wrap: wrap;
+}
+
+.profile-data {
+    width: 50%;
+    padding-bottom: 30px;
+}
+
+.profile-data h5 {
+    font-family: SiemensSans-bold;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: left;
+    color: #000000;
+    padding-bottom: 4px;
+}
+
+.profile-data p {
+    font-family: SiemensSans-Roman;
+    font-size: 15px;
+    text-align: left;
+    color: #70757d;
+}
+
+.update-pass {
+    padding: 0px 8%;
+}
+
+.update-pass li {
+    font-family: SiemensSans-Roman;
+    font-size: 13px;
+    text-align: left;
+    color: #7a99a9;
+    padding-bottom: 15px;
+}
+
+.update-pass li:last-child {
+    padding: 0;
+}
+
+.update-pass-container {
+    padding: 30px 10%;
+    border-bottom: 1px solid #cecece;
+}
+
+.profile-mini-heading {
+    font-family: SiemensSans-Roman;
+    font-size: 15px;
+    text-align: left;
+    color: #000000;
+    padding-bottom: 14px;
+}
+
+.password-deactvate {
+    padding-right: 2%;
+}
+
+.profile-cal-btn {
+    width: 100%;
+    font-size: 15px;
+}
+
+.upload-text {
+    position: absolute;
+    width: 100%;
+    opacity: 0.61;
+    background-color: #000000;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 18px 0px;
+    bottom: calc(0px - 62px);
+}
+
+.upload-text input {
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    left: 0;
+    top: 0;
+    height: 100%;
+}
+
+.hov-text {
+    text-align: center;
+    cursor: pointer;
+}
+
+.hov-text button {
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 15px;
+}
+
+.user-img:hover .upload-text {
+    bottom: 0;
+    height: auto;
+}
+
+.camera-icon {
+    vertical-align: text-bottom;
+    padding-right: 6px;
+}
+
+.profile-edit-lik {
+    color: #dbe3e8;
+    cursor: pointer;
+}
+
+.profile-maturity-box {
+    /* height: 42vh; */
+    padding: 24px 5%;
+    text-align: center;
+}
+
+.profile-white-box {
+    background-color: #fff;
+    padding: 28px 16%;
+}
+
+.maturity-text-btn {
+    padding-top: 14px;
+}
+
+.profile-maturity-text {
+    color: #000000;
+    font-size: 15px;
+}
+
+.maturity-para {
+    font-family: SiemensSans-Roman;
+    font-size: 13px;
+    line-height: 1.54;
+    color: #70757d;
+    padding-top: 8px;
+    padding-bottom: 20px;
+}
+
+.personal-edit-field,
+.company-edit-field {
+    display: none;
+}
+
+.personal-edit-field.active {
+    display: block;
+}
+
+.close-edit.active {
+    display: none;
+}
+
+.company-edit-field.active {
+    display: block;
+}
+
+.edited-field.active {
+    display: none;
+}
+
+.personal-data-edit {
+    padding-top: 72px;
+}
+
+.edit-company {
+    justify-content: space-between;
+}
+
+.edit-company .pop-signup {
+    width: 41%;
+}
+
+.unsaved-btn {
+    border: solid 1px #00999a;
+    background-color: #fff;
+    color: #00999a;
+}
+
+.unsaved-profile-btns {
+    padding-bottom: 10px;
+}
+
+.unsaved-pop-up {
+    background-color: #ffff;
+}
+
+.unsaved-btns-para {
+    padding: 0px 12%;
+    padding-bottom: 40px;
+}
+
+.unsaved-para {
+    color: #474a4f;
+    padding-top: 20px;
+    padding-bottom: 32px;
+}
+
+
+/* Profile Page CSS End Here */
+
+
+/* Tenders Page CSS Start Here */
+
+#small-select {
+    display: none;
+}
+
+.two-column-center {
+    padding: 0px 70px;
+}
+
+.padding-right-none {
+    padding-left: 0 !important;
+}
+
+.filter-month {
+    width: 186px;
+}
+
+.filter-day-year {
+    width: 78px;
+}
+
+.scroll-btn {
+    position: fixed;
+    bottom: 190px;
+    right: 40px;
+    transform: scale(0);
+    cursor: pointer;
+}
+
+.scroll-btn.active {
+    transform: scale(1);
+    transition: 0.6s;
+}
+
+.scrolling-container {
+    position: relative;
+}
+
+.access-para-description {
+    padding: 30px 0px;
+}
+
+.access-page-not-login {
+    width: 45%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 50px 0px
+}
+
+.top-page-tabs li {
+    font-family: SiemensSans-Roman;
+    font-size: 15px;
+    letter-spacing: -0.1px;
+    text-align: left;
+    color: #d1d4d9;
+    margin: 0px 2.7%;
+    padding: 15px 0px;
+}
+
+.top-page-tabs>li.active {
+    color: #ffffff;
+    border-bottom: 4px solid #00999a;
+    font-family: SiemensSans-bold;
+}
+
+.top-page-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #000000;
+    align-items: center;
+}
+
+.equal-border {
+    border: 42px solid #ecf0f1;
+    /* border-bottom: 0; */
+}
+
+.tenders-first-content p {
+    padding: 26px 0px;
+}
+
+.tenders-first-content {
+    border-bottom: 1px solid #cecece;
+    margin-bottom: 44px;
+}
+
+.tenders-first-content h5 {
+    font-family: SiemensSans-bold;
+    font-weight: bold;
+}
+
+.equal-border h6 {
+    font-family: SiemensSans-bold;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    color: #000000;
+    padding-bottom: 30px;
+}
+
+.tender-list-login {
+    text-align: center;
+}
+
+.outline-filter-btn {
+    color: #00999a;
+    background-color: #fff;
+}
+
+.filters-default-contents {
+    border: 1px solid #cecece;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 12px;
+}
+
+.tenders-default-heading {
+    display: flex;
+    /* flex-wrap: wrap; */
+}
+
+.column-top-space {
+    padding-top: 24px;
+}
+
+.tenders-heading-space {
+    width: 33.3%;
+    /* padding-right: 11%; */
+}
+
+.tenders-headin {
+    font-family: SiemensSans-bold;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: -0.1px;
+    text-align: left;
+    color: #000000;
+}
+
+.tenders-publish-choose {
+    font-family: SiemensSans-Roman;
+    font-size: 15px;
+    letter-spacing: -0.1px;
+    text-align: left;
+    color: #70757d;
+    padding: 0px 8px 0px 2px;
+}
+
+.publish-img {
+    vertical-align: text-bottom;
+}
+
+.filters-default-green {
+    font-family: SiemensSans-bold;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: -0.1px;
+    text-align: left;
+    color: #00999a;
+}
+
+.tenders-para {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tenders-para-text {
+    padding-top: 30px;
+    padding-right: 3%;
+}
+
+.tenders-para-text p {
+    color: #474a4f;
+}
+
+.view-more {
+    font-family: SiemensSans-bold;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: -0.1px;
+    text-align: center;
+    color: #00999a;
+    cursor: pointer;
+}
+
+.view-more-container {
+    padding: 19px 0px;
+}
+
+.not-login {
+    padding-top: 12px;
+}
+
+
+/* Tenders Page CSS End Here */
+
+
+/* Marketplace CSS Start Here */
+
+.marketplace-top-gray {
+    padding: 50px 7.2%;
+}
+
+.gray-backgroung-top {
+    background-color: #ecf0f1;
+}
+
+.gray-backgroung-para {
+    padding-top: 30px;
+    padding-right: 30%;
+}
+
+.gray-container-top-para {
+    padding: 30px 3% 12px 3%;
+}
+
+.gray-container-two-column {
+    display: flex;
+    padding: 0px 10% 50px 10%;
+}
+
+.gray-container-column-one {
+    width: 28%;
+}
+
+.gray-container-column-two {
+    width: 72%;
+}
+
+.service-providers-btn {
+    width: 178px;
+}
+
+.service-provider-center-para {
+    padding: 20px 0px 20px 0px;
+}
+
+.green-text {
+    color: #00999a !important;
+}
+
+.list-tender-background {
+    background-color: #ecf0f1;
+    padding: 4px 7px;
+    margin-right: 2%;
+    color: #474a4f;
+    display: inline-block;
+    margin-bottom: 14px;
+}
+
+.tenders-list-grid :last-child {
+    /* margin-right: 0%; */
+}
+
+.align-tenders-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-top: 24px;
+    padding-right: 3%;
+}
+
+.tenders-list-grid {
+    width: 33%;
+}
+
+.tenders-list-grid-two {
+    text-align: center;
+}
+
+.tenders-list-grid-three {
+    text-align: right;
+}
+
+.skills-industry-email {
+    color: #70757d;
+    font-size: 17px;
+    display: inline-flex;
+    padding: 4px 8px 0px 0px;
+}
+
+.list-tenders-img {
+    padding-right: 4px;
+}
+
+.email-automotive {
+    color: #000000;
+    font-size: 17px;
+}
+
+.industry-automotive {
+    color: #474a4f;
+}
+
+.flex {
+    display: flex;
+}
+
+.search-icon-container {
+    width: 100%;
+    position: relative;
+    top: -3px;
+}
+
+.location-filter {
+    padding-right: 16px;
+    color: #70757d;
+    font-family: SiemensSans-bold;
+    font-size: 16px;
+}
+
+.filter-left-field {
+    width: 50%;
+    padding-right: 1%;
+}
+
+.filter-right-field {
+    width: 50%;
+    padding-right: 3%;
+    padding-left: 3%;
+}
+
+.unremoved-input-line {
+    padding: 0px 18px 3px 0px;
+}
+
+.unremoved-input-line:focus {
+    border-bottom: 1px solid #d1d4d9;
+}
+
+.unremoved-input-line::-webkit-input-placeholder {
+    color: #70757d;
+    font-family: SiemensSans-Roman;
+    font-size: 16px;
+}
+
+.filter-select {
+    width: 100%;
+}
+
+.more-filter-spacing {
+    padding-top: 40px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid #d1d4d9;
+}
+
+.filter-checkbox {
+    padding-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.two-column-align {
+    justify-content: space-between;
+}
+
+.filter-check {
+    margin: 0;
+    padding: 0;
+    margin-right: 40px;
+}
+
+.filter-checkbox :last-child {
+    margin-right: 0;
+}
+
+.text-checkbox-text {
+    color: #70757d;
+    display: initial !important;
+}
+
+.apply-filter-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cancel-apply-filter {
+    font-family: SiemensSans-bold;
+    padding: 0px 16px;
+    cursor: pointer;
+}
+
+.clear-filter {
+    cursor: pointer;
+    background-color: inherit;
+    border: none;
+    outline: none;
+    padding: 0;
+}
+
+.clear-filter img {
+    vertical-align: bottom;
+}
+
+.list-profile-aero {
+    color: #fff;
+    padding-bottom: 10px;
+    display: flex;
+    font-family: SiemensSans-Roman;
+    font-size: 12px;
+    letter-spacing: -0.1px;
+    text-align: left;
+}
+
+.black-background-aero::after {
+    content: ">";
+    padding: 0px 6px;
+}
+
+.list-profile-aero li a {
+    font-family: SiemensSans-Roman;
+    font-size: 12px;
+    letter-spacing: -0.1px;
+    color: inherit;
+}
+
+.up-input-text {
+    display: block;
+    padding-bottom: 11px;
+    font-family: SiemensSans-bold;
+    font-size: 13px;
+    text-align: left;
+    color: #000000;
+}
+
+.list-profile-container {
+    padding: 50px 20%;
+}
+
+.left-right-input {
+    width: 100%;
+}
+
+.left-input {
+    margin-right: 9%;
+}
+
+.right-input {
+    margin-left: 7%;
+}
+
+.two-column-input-space {
+    padding-bottom: 22px;
+}
+
+.add-more-input {
+    margin-bottom: 18px;
+}
+
+.list-search {
+    top: 0%;
+}
+
+.add-input {
+    font-family: SiemensSans-bold;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: -0.1px;
+    text-align: left;
+    color: #00999a;
+    cursor: pointer;
+}
+
+.textarea {
+    border: 1px solid #d1d4d9;
+    padding: 10px 18px;
+}
+
+.textarea:focus {
+    border: 1px solid #00999a;
+}
+
+.marketplace-profile-mail {
+    color: #fff;
+    font-size: 17px;
+}
+
+.inbox-mail {
+    padding-right: 6px;
+}
+
+.top-black-container-align {
+    display: flex;
+    justify-content: space-between;
+}
+
+.marketplace-panel-heading {
+    font-family: SiemensSans-Roman;
+    font-size: 15px;
+    color: #7a99a9;
+    padding-bottom: 20px;
+}
+
+.marketplace-acordion :last-child {
+    padding-bottom: 0;
+}
+
+.marketplace-acordion {
+    padding: 30px 30px;
+    border-bottom: 1px solid #cecece;
+}
+
+.left-accordion {
+    width: 21%;
+    background-color: #ecf0f1;
+}
+
+.left-accordion:last-child {
+    padding-bottom: 0;
+}
+
+.two-column-accordion {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.right-accordion {
+    width: 79%;
+    padding-top: 18px;
+    padding-bottom: 18%;
+}
+
+.right-accordion.no-bottom-padding {
+    padding-bottom: 50px;
+}
+
+.right-panel-heading {
+    font-family: SiemensSans-bold;
+    font-size: 16px;
+    color: #474a4f !important;
+}
+
+.accordion-bottom-content {
+    padding-top: 30px;
+}
+
+.accordion-content-heading {
+    font-family: SiemensSans-bold;
+    padding-bottom: 2px;
+}
+
+.align-accordion-content {
+    display: flex;
+    padding-top: 6px;
+    padding-bottom: 20px;
+}
+
+.skill-number {
+    padding-right: 14px;
+}
+
+.pricing {
+    font-family: SiemensSans-bold;
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: -0.2px;
+    text-align: left;
+    color: #00999a;
+    /* padding: 14px 0px; */
+    padding-bottom: 14px;
+}
+
+.accordion-table {
+    margin-top: 41px;
+}
+
+
+/* Marketplace CSS End Here */
+
+
+/* News & Updates CSS Start Here */
+
+.download-file {
+    position: absolute;
+    top: 29px;
+    right: 43px;
+    z-index: 9;
+}
+
+.download-file a {
+    display: block;
+}
+
+.download-link:hover {
+    color: #00999a;
+}
+
+.download-link:hover .download-icon svg g {
+    stroke: #00999a;
+}
+
+.news-tabs li {
+    padding: 15px 0.8%;
+    margin: 0px 1.7%;
+}
+
+.news-tabs-content-space {
+    padding: 30px 3%;
+    display: block;
+}
+
+.news-tabs-content-space:hover {
+    /* background-color: red; */
+}
+
+
+/* .hov-underline:hover .service-underline {
+    width: 100%;
+    transition: 0.4s;
+} */
+
+.news-website-link {
+    background-color: #ecf0f1;
+    padding: 40px 4%;
+}
+
+.border-tabs-content {
+    border-top: 1px solid #cecece;
+    position: relative;
+}
+
+.news-all-comuns> :last-child {
+    border-bottom: 1px solid #cecece;
+}
+
+.news-updates-para-link {
+    font-family: SiemensSans-Roman;
+    font-size: 18px;
+    line-height: 1.22;
+    text-align: left;
+    color: #424242;
+}
+
+.news-updates-icon {
+    padding-right: 10px;
+}
+
+.link-news-website {
+    font-family: SiemensSans-bold;
+    color: #00999a;
+}
+
+.download-tabs-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.download-document-title {
+    font-family: SiemensSans-bold;
+    font-size: 18px;
+    line-height: 1.22;
+    text-align: left;
+    color: #000000;
+}
+
+.download-link {
+    font-family: SiemensSans-bold;
+    font-size: 16px;
+    letter-spacing: -0.1px;
+    color: #474a4f;
+    display: flex;
+}
+
+.download-icon {
+    padding-left: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.download-para {
+    padding: 18px 34%;
+    padding-left: 0;
+}
+
+.download-content-by {
+    font-size: 15px;
+    padding-bottom: 16px;
+}
+
+.download-by {
+    border-right: 1px solid;
+    padding-right: 2px;
+    font-weight: bold;
+}
+
+.download-content-date {
+    font-family: SiemensSans-bold;
+    color: #00999a;
+    padding-left: 5px;
+}
+
+.black-background-top-space {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.black-background-top-btn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.news-btns {
+    padding: 8px 0px;
+}
+
+.download-share {
+    font-family: SiemensSans-Roman;
+    font-size: 14px;
+    letter-spacing: -0.1px;
+    text-align: center;
+    color: #ffffff;
+    border: solid 1px #00999a;
+    background-color: inherit;
+    width: 120px;
+    margin-right: 10px;
+    padding: 10px 0px;
+    transition: 0.2s;
+}
+
+.download-share-icon {
+    padding-right: 8px;
+}
+
+.next-prev-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 30px 6% 50px 6%;
+}
+
+.next-prev-btns {
+    display: flex;
+    padding: 16px 20px;
+    border: 1px solid #cecece;
+    align-items: center;
+    margin-right: 12px;
+    width: 246px;
+    cursor: pointer;
+    height: max-content;
+    transition: 0.2s;
+    border-radius: 2px;
+}
+
+.previous-post,
+.next-post {
+    font-family: SiemensSans-Roman;
+    font-size: 14px;
+    letter-spacing: -0.1px;
+    text-align: left;
+    color: #474a4f;
+    padding-bottom: 4px;
+}
+
+.prev-next-para {
+    font-family: SiemensSans-bold;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.38;
+    text-align: left;
+    color: #474a4f;
+}
+
+
+/* .next-post {
+    font-family: SiemensSans-Roman;
+    font-size: 14px;
+    letter-spacing: -0.1px;
+    text-align: left;
+    color: #474a4f;
+    padding-bottom: 4px;
+} */
+
+.previous-post-icon {
+    padding-right: 30px;
+}
+
+.next-post-icon {
+    padding-left: 30px;
+}
+
+.next-prev-btns:hover .prev-next-para,
+.next-prev-btns:hover .next-post,
+.next-prev-btns:hover .previous-post,
+.next-prev-btns:hover .hove-white svg path {
+    color: #ecf0f1;
+    stroke: #ecf0f1;
+}
+
+.news-post-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.news-post-left-container {
+    width: calc(75% + 12px);
+}
+
+.news-post-right-container {
+    background-color: #ecf0f1;
+    width: calc(25% - 12px);
+    padding: 20px 0px;
+    border-left: 1px solid #cecece;
+}
+
+.post-img {
+    width: 100%;
+}
+
+.post-by {
+    padding: 10px 2.5%;
+}
+
+.post-para {
+    padding: 30px 20% 50px 5%;
+    border-bottom: 1px solid #cecece;
+}
+
+.post-para p {
+    padding-bottom: 30px;
+}
+
+.post-para :last-child {
+    padding: 0;
+}
+
+.post-title-status {
+    font-family: SiemensSans-bold;
+    font-size: 16px;
+    line-height: 1.38;
+    text-align: left;
+    color: #474a4f;
+    padding-bottom: 9px;
+    padding: 0px 11%;
+}
+
+.title-post {
+    padding: 6px 0px;
+    font-family: SiemensSans-bold;
+    font-size: 14px;
+    line-height: 1.57;
+    text-align: left;
+    color: #545454;
+}
+
+.post-title-date {
+    padding: 20px 11%;
+    border-bottom: 1px solid #cecece;
+}
+
+.posts-date-by {
+    font-size: 13px;
+    padding: 0;
+}
+
+.share-modal {
+    background-color: #fff;
+    width: 37% !important;
+}
+
+.share-modal-container {
+    padding: 0px 6%;
+}
+
+.sharing-img-container {
+    flex-wrap: wrap;
+    display: flex;
+    padding-bottom: 50px;
+    justify-content: space-between;
+}
+
+.sharing-img-container :last-child {
+    margin-right: 0;
+}
+
+.share-img-count {
+    position: relative;
+    height: max-content;
+    margin-right: 12px;
+}
+
+.sharing-numbers {
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    font-family: SiemensSans-bold;
+    font-size: 15px;
+    line-height: 1.4;
+    text-align: center;
+    color: #ffffff;
+}
+
+.share-modal-text {
+    padding-bottom: 23px;
+}
+
+.share-cross-modal {
+    padding: 8px !important;
+}
+
+.modal-open .center-modal {
+    display: flex;
+    align-items: center;
+}
+
+.socials-icons {
+    transition: 0.5s;
+}
+
+.share-img-count :hover .socials-icons {
+    transform: scale(1.1);
+}
+
+
+/* News & Updates CSS End Here */
+
+
+/* Academia Page CSS Start Here */
+
+
+/* For Search location field while typing cross sign should come */
+
+.search-location.hide-search {
+    transform: scale(0);
+}
+
+.cross-search.show-cross {
+    cursor: pointer;
+    transform: scale(1);
+}
+
+.cross-search {
+    transform: scale(0);
+}
+
+.input-search-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 6px;
+    transition: 0.4s;
+    height: max-content;
+}
+
+
+/* For Search location field while typing cross sign should come */
+
+.row-link {
+    display: block;
+    transition: 0.4s;
+}
+
+.row-link:hover .filters-default-contents {
+    /* background-color: red; */
+}
+
+.row-link:hover {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+.btn-icon {
+    text-align: center;
+    padding: 0;
+}
+
+.btn-icon-align {
+    padding-right: 10px;
+}
+
+.btn-icon-align img {
+    vertical-align: sub;
+}
+
+.gray-background-small-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.profile-slide-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0px;
+}
+
+.profile-left-icon-name {
+    width: 100%;
+    display: flex;
+}
+
+.profile-slide-personal {
+    padding: 0px 3.6%;
+    width: 100%;
+}
+
+.no-padding-right {
+    padding-right: 0;
+}
+
+.profile-education-work-container {
+    display: flex;
+}
+
+.student-profile-left-container {
+    width: calc(34% - 5px);
+    background-color: #ecf0f1;
+    padding-right: 4px;
+}
+
+.profile-black-container {
+    opacity: 0.9;
+    background-color: #000000;
+    padding: 15px 4%;
+}
+
+.profile-black-container-heading {
+    font-family: SiemensSans-bold;
+    font-size: 15px;
+    letter-spacing: -0.1px;
+    text-align: left;
+    color: #ffffff;
+}
+
+.student-profile-right-container {
+    width: calc(66% + 5px);
+}
+
+.education-work-icon {
+    padding-right: 10px;
+}
+
+.education-work-icon img {
+    vertical-align: bottom;
+}
+
+.profile-education-white-container {
+    background-color: #fff;
+}
+
+.profile-education-inernal {
+    padding: 30px 8%;
+    border-bottom: 1px solid #cecece;
+}
+
+.profile-education-inernal :last-child {
+    padding-bottom: 0;
+}
+
+.no-border {
+    border: none;
+}
+
+.profile-education-inernal :nth-child(+n+2) {
+    font-size: 13px;
+}
+
+.profile-education-name {
+    color: #474a4f;
+    font-size: 16px;
+}
+
+.school-university-name {
+    color: #000000;
+    font-size: 13px;
+}
+
+.education {
+    padding-bottom: 9px;
+    font-family: SiemensSans-bold;
+}
+
+.download-resume-container {
+    padding: 15px 4%;
+}
+
+.sixteen-bold {
+    font-family: SiemensSans-bold;
+    font-size: 16px;
+    letter-spacing: -0.1px;
+    text-align: left;
+    color: #474a4f;
+}
+
+.resume-text {
+    padding-bottom: 16px;
+}
+
+.download-resume-white-container {
+    background-color: #fff;
+    padding: 20px 40px;
+}
+
+.resume-icon-text {
+    display: flex;
+    padding-bottom: 14px;
+}
+
+.resume-icon {
+    padding-right: 23px;
+}
+
+.thirteen-roman {
+    font-family: SiemensSans-Roman;
+    font-size: 13px;
+    line-height: 1.69;
+    text-align: left;
+    color: #000000;
+}
+
+.full-btn {
+    width: 100%;
+}
+
+.work-title-place {
+    font-family: SiemensSans-bold;
+    font-size: 16px;
+    letter-spacing: -0.1px;
+    text-align: left;
+    color: #474a4f;
+}
+
+.work-title-dot::after {
+    content: ".";
+    font-size: 24px;
+    padding: 0px 4px
+}
+
+.thirteen-bold {
+    font-size: 13px;
+    font-family: SiemensSans-bold;
+    color: #474a4f;
+    line-height: 1.62;
+}
+
+.work-heading-para {
+    padding-bottom: 6px;
+}
+
+.work-profile-container {
+    border-bottom: 1px solid #cecece;
+    padding: 30px 8.5%;
+}
+
+.work-main-section {
+    padding-bottom: 20%;
+}
+
+.post-job-btn {
+    width: 138px;
+}
+
+.equal-border-accordion {
+    border: 1px solid #cecece !important;
+    border-radius: 0px !important;
+}
+
+.up-icon:after {
+    content: "";
+    float: right;
+    background-image: url(../assets/icons/accordion-open.svg);
+    height: 10px;
+    width: 18px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.down-icon.collapsed:after {
+    content: "";
+    background-image: url(../assets/icons/accordion-close.svg);
+    height: 10px;
+    width: 18px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.down-icon,
+.up-icon,
+.minus,
+.plus {
+    display: block;
+}
+
+
+/* .panel-title a {
+    display: block;
+} */
+
+.accordion-post-job {
+    padding: 26px 2%;
+}
+
+.job-openings {
+    width: 26%;
+}
+
+.job-openings-second {
+    padding-left: 2%;
+}
+
+.job-openings-third {
+    width: max-content;
+    padding-left: 5%;
+}
+
+.job-openings-columns {
+    padding-right: 13%;
+}
+
+.job-openings-description {
+    padding-bottom: 9px;
+    color: #70757d;
+}
+
+.job-openings-hidden-btn {
+    padding-top: 30px;
+}
+
+.upload-file-border {
+    border: 1px solid #d1d4d9;
+    padding: 30px 30px;
+}
+
+.input-file {
+    margin-left: -90px !important;
+    outline: none !important;
+    cursor: pointer;
+}
+
+.background-input-upload {
+    background-color: #edf1f2;
+    padding: 30px 30px;
+    display: flex;
+    position: relative;
+    height: 79px;
+}
+
+.input-file-icon {
+    display: flex;
+    font-family: SiemensSans-Roman;
+    font-size: 14px;
+    line-height: 1.36;
+    color: #545454;
+    width: 100%;
+    justify-content: center;
+}
+
+.file-choose {
+    font-family: SiemensSans-bold;
+    color: #00999a;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.drop-file-icon {
+    padding-right: 8px;
+}
+
+.file-type {
+    font-family: SiemensSans-Roman;
+    font-size: 13px;
+    text-align: left;
+    color: #70757d;
+    padding-top: 10px;
+}
+
+.uploaded {
+    display: none;
+}
+
+.remove-border {
+    border-bottom: 1px solid #cecece;
+}
+
+.remove-border.active {
+    border-bottom: none;
+}
+
+.no-bottom-border {
+    border-bottom: none !important;
+}
+
+.accordion-left-space {
+    padding-left: 4.7%;
+}
+
+.accordion-left-column {
+    width: 60%;
+    border-bottom: 1px solid #cecece;
+    padding-right: 3%;
+}
+
+.accordion-right-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.accordion-right-column {
+    width: 40%;
+}
+
+.internal-accordion-heading {
+    font-family: SiemensSans-bold;
+    font-size: 16px;
+    color: #474a4f;
+    padding-bottom: 20px;
+}
+
+.accordion-internal-column {
+    padding-bottom: 20px;
+}
+
+.para-heading-internal {
+    font-family: SiemensSans-bold;
+    font-size: 16px;
+    padding-bottom: 4px;
+}
+
+.two-column-filter-space {
+    padding-bottom: 31px;
+}
+
+.two-col-filter-heading {
+    width: 178px;
+}
+
+.full-width {
+    width: 100%;
+}
+
+
+/* Academia Page CSS End Here */
+
+
+/* Industries Page CSS Start Here */
+
+.outer :last-child .industry-main-grid {
+    overflow: hidden;
+}
+
+[type="checkbox"].largeCheck:not(:checked)+span:not(.lever):after,
+[type="checkbox"].largeCheck:checked+span:not(.lever):after {
+    width: 14px !important;
+    height: 14px !important;
+    border: 1px solid #00999a !important;
+}
+
+[type="checkbox"].largeCheck:checked+span:not(.lever):before {
+    top: -2px !important;
+    left: 1px !important;
+}
+
+.date-filter {
+    display: flex;
+}
+
+.show-content {
+    /* display: none; */
+}
+
+.show-content p {
+    padding-bottom: 20px;
+}
+
+.more-content {
+    font-family: SiemensSans-bold;
+    font-size: 15px;
+    color: #000000;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.automotive-gray-para {
+    padding-bottom: 18px
+}
+
+.gray-container-column-two p {
+    color: #474a4f;
+}
+
+.automotive-gray-heading {
+    padding-bottom: 30px;
+}
+
+.center-heading-filter {
+    display: flex;
+    align-items: center;
+}
+
+.industrial-filter-grey {
+    padding: 26px 3% 16px 3%;
+}
+
+.industrial-filter-grey .filter-container-align {
+    padding-bottom: 0;
+}
+
+.industrial-page-grey {
+    display: flex;
+    background-color: #ecf0f1;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.industry-page-heading {
+    font-family: SiemensSans-Roman;
+    font-size: 20px;
+    color: #474a4f;
+}
+
+.industry-external-link {
+    font-family: SiemensSans-bold;
+    font-size: 16px;
+    color: #000000;
+}
+
+.industry-page-heading-icon {
+    padding-right: 8px;
+}
+
+.industry-main-grid {
+    display: flex;
+    background: #ecf0f1;
+}
+
+.industry-left-grid {
+    width: 33%;
+}
+
+.industry-right-border {
+    border-right: 6px solid #ecf0f1;
+}
+
+.industry-left-border {
+    border-left: 6px solid #ecf0f1;
+}
+
+.industry-left-grid-first {
+    width: 100%;
+    /* position: relative; */
+    margin-bottom: 16px;
+}
+
+.industry-grid-content {
+    padding: 28px 30px;
+    background-color: #fff;
+    height: 166px;
+    overflow: auto;
+}
+
+.industry-grid-content::-webkit-scrollbar {
+    display: none;
+}
+
+.industry-grid-heading {
+    font-family: SiemensSans-bold;
+    font-size: 17px;
+    font-weight: 900;
+    color: #000000;
+    padding-bottom: 9px;
+    line-height: 1.29;
+}
+
+.industry-grid-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 1s;
+}
+
+.industries-large-img {
+    height: 703px;
+}
+
+.industries-small-img {
+    height: 261px;
+}
+
+.industries-two-column-img {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.industry-right-grid {
+    width: 67%;
+}
+
+
+/* .industry-video-grid {
+    position: relative;
+    cursor: pointer;
+} */
+
+.industry-video-play-icon {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+}
+
+.industry-video-play-icon svg {
+    transition: 0.5s;
+}
+
+.internal-link {
+    display: block;
+    cursor: pointer;
+}
+
+.internal-link:hover {
+    box-shadow: 0px 2px 6px 0px #ccc;
+    transition: .4s;
+}
+
+.internal-link:hover .industry-grid-image {
+    transform: scale(1.1);
+}
+
+.internal-link:hover .industry-video-play-icon svg {
+    transform: scale(1.1);
+}
+
+.internal-link:hover .industry-video-play-icon svg g circle {
+    fill: #FF0000;
+    stroke: #FF0000;
+    fill-opacity: 1;
+}
+
+[type="date"] {
+    background: #fff url(../assets/icons/down-aero.svg) 100% 50% no-repeat;
+    z-index: 2222;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+[type="date"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+}
+
+.two-row-filter {
+    width: 100%;
+}
+
+.single-ro-filter {
+    padding-bottom: 22px;
+    flex-wrap: wrap;
+}
+
+.more-space-heading {
+    padding-right: 30px;
+}
+
+.filter-first-column {
+    width: 37%;
+}
+
+.filter-column-heading {
+    font-family: SiemensSans-Roman;
+    font-size: 15px;
+    color: #70757d;
+    padding-right: 30px;
+}
+
+.filter-column-input {
+    font-family: SiemensSans-Roman;
+    font-size: 15px;
+    color: #70757d;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #d1d4d9;
+}
+
+.filter-second-column {
+    width: 48%;
+    /* padding-left: 130px; */
+}
+
+.filter-date-top-space {
+    /* padding-top: 6px; */
+}
+
+.industry-grey-box {
+    padding-top: 167px;
+    padding-bottom: 167px;
+}
+
+.inline {
+    display: inline;
+}
+
+.filter-row {
+    padding-left: 24px;
+    display: flex;
+}
+
+.date-center {
+    padding: 0px 50px;
+}
+
+.industries-filter-column {
+    width: 50%;
+}
+
+
+/* Industries Page CSS End Here */
+
+
+/* For Mobile Responsivness */
+
+@media (max-width: 954px) {
+    .filter-first-column,
+    .filter-second-column {
+        width: 100%;
+    }
+    .filter-first-column {
+        padding-left: 20px;
+        padding-top: 21px;
+        padding-bottom: 15px;
+    }
+    .filter-second-column {
+        padding-left: 20px;
+        padding-top: 10px;
+    }
+    .filter-check {
+        padding-bottom: 9px;
+    }
+}
+
+@media (max-width: 585px) {
+    .financial-spacing {
+        padding: 34px 2%;
+    }
+    .tbody tr :nth-child(-1n+4) {
+        font-size: 14px;
+    }
+    tbody tr :nth-child(-1n+4) {
+        font-size: 14px;
+    }
+    .industry-external-link {
+        font-size: 14px;
+    }
+    .industry-page-heading {
+        font-size: 16px;
+    }
+    .top-page-tabs :last-child {
+        padding-right: 6px;
+    }
+    .top-page-tabs {
+        height: 60px;
+        overflow-x: scroll;
+        display: -webkit-box !important;
+        width: 100%;
+        flex-wrap: unset !important;
+    }
+    .top-page-tabs li {
+        width: max-content;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .equal-border {
+        border: none;
+        padding-right: 4%;
+    }
+    .tabs-faq,
+    .border-container {
+        border: none;
+    }
+    .tab-pane .equal-border {
+        padding-right: 0;
+    }
+    .access-page-not-login {
+        width: 100%;
+        padding: 50px 20px;
+    }
+    .download-document-title {
+        font-size: 13px;
+        padding-right: 6px;
+    }
+    .download-file {
+        top: 30px;
+        right: 6px;
+    }
+    .download-link {
+        font-size: 13px;
+    }
+    .download-link a {
+        display: flex;
+    }
+    .download-para {
+        padding: 18px 0%;
+    }
+    .news-all-comuns .news-tabs-content-space .list-tender-background {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 780px) {
+    .profile-container {
+        flex-direction: column;
+    }
+    .profile-left-container {
+        width: 100% !important;
+        padding-top: 20px;
+    }
+    .update-input-btns {
+        width: 94% !important;
+    }
+    .user-img {
+        width: 71%;
+        margin: 0 auto;
+        margin-bottom: 22px;
+    }
+    .profile-grey-container {
+        border-top: 1px solid #cecece;
+    }
+    .profile-right-container {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 400px) {
+    .date-center {
+        padding-bottom: 0 !important;
+    }
+}
+
+@media (max-width: 446px) {
+    .align-user-select {
+        flex-direction: column;
+    }
+    .user-account {
+        padding-bottom: 14px;
+    }
+}
+
+@media (max-width: 1056px) {
+    .small-modal-content {
+        width: 90% !important;
+    }
+}
+
+@media (max-width: 900px) {
+    .student-profile-left-container,
+    .student-profile-right-container {
+        width: 100%;
+    }
+    .profile-education-work-container {
+        flex-direction: column;
+    }
+    .first-industrial {
+        padding: 16px 3% 16px 3% !important;
+    }
+    .industrial-page-grey {
+        padding: 0px 3% 16px 3%;
+    }
+    .tenders-list-grid {
+        width: 100% !important;
+    }
+    .industry-main-grid {
+        flex-direction: column;
+    }
+    .industry-left-grid,
+    .industry-right-grid {
+        width: 100%;
+    }
+    .industries-large-img,
+    .industries-small-img {
+        height: auto;
+    }
+    .industry-right-border,
+    .industry-left-border {
+        border: none;
+    }
+    .industry-grid-content,
+    .industry-grid-content {
+        height: auto;
+        padding: 20px 20px;
+    }
+    .industry-left-grid-first {
+        margin-bottom: 0px;
+    }
+    .internal-link {
+        margin-bottom: 16px;
+    }
+    .industry-video-play-icon svg {
+        width: 67px;
+        height: 67px;
+    }
+}
+
+@media (max-width: 1128px) {
+    .job-openings-list :last-child {
+        padding-bottom: 0;
+    }
+    .job-openings-second,
+    .job-openings-second,
+    .job-openings-third {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .job-openings-list div {
+        padding-bottom: 24px;
+    }
+    .job-openings {
+        width: 50%;
+    }
+}
+
+@media (max-width: 902px) {
+    .job-openings,
+    .job-openings-third {
+        width: auto !important;
+    }
+}
+
+@media (max-width: 692px) {
+    .top-black-container-align {
+        flex-direction: column;
+    }
+    .name-mail {
+        padding-bottom: 10px;
+        font-size: 20px;
+    }
+    .flex {
+        flex-wrap: wrap;
+    }
+    .filter-spacing {
+        /* padding: 15px 5%; */
+        padding: 30px 5% 30px 5%;
+    }
+    .filter-left-field,
+    .filter-right-field {
+        width: 100%;
+        padding-left: 0;
+        padding-bottom: 32px;
+    }
+    .search-icon-container {
+        left: 11px;
+        top: 8px !important;
+    }
+    .list-search {
+        left: 0px;
+        top: 0px !important;
+    }
+    .input-search-icon {
+        right: 6px;
+    }
+    .filter-checkbox {
+        padding-top: 33px !important;
+        flex-direction: column;
+    }
+    .filter-check {
+        margin-left: 12px !important;
+    }
+    .location-filter {
+        padding-bottom: 10px;
+    }
+    .column-top-space {
+        flex-direction: column;
+    }
+    .tenders-default-heading {
+        align-items: center;
+    }
+    .tenders-heading-space {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 1318px) {
+    .tenders-list-grid-three,
+    .tenders-list-grid-two {
+        /* text-align: left; */
+    }
+    .align-tenders-list {
+        padding-right: 0%;
+    }
+    .tenders-list-grid {
+        /* width: 50%; */
+        padding-bottom: 26px;
+    }
+    .tenders-list-grid:last-child {
+        padding-bottom: 0;
+    }
+}
+
+@media (max-width: 852px) {
+    .two-column-inputs {
+        flex-direction: column;
+    }
+    .edit-company .pop-signup {
+        width: 100% !important;
+    }
+    .pop-signup {
+        margin-left: 0px !important;
+    }
+    .uppercase-pass {
+        padding-bottom: 30px;
+    }
+    .modal-content-two {
+        padding: 0px 3% !important;
+    }
+    .modal-content-signup {
+        height: auto !important;
+    }
+    .left-accordion {
+        display: none;
+    }
+    .right-accordion {
+        width: 100%;
+    }
+}
+
+@media (max-width: 647px) {
+    .search-main.active {
+        left: 106px !important;
+    }
+}
+
+@media (max-width: 1280px) {
+    .share-img-count {
+        margin-bottom: 14px;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 1168px) {
+    #large-select {
+        display: none;
+    }
+    #small-select {
+        display: block;
+        padding-right: 30px;
+        padding-top: 36px;
+    }
+    #small-select>h4 {
+        padding-bottom: 8px;
+    }
+    /* .date-filter {
+        flex-direction: column;
+    } */
+    .padding-right-none {
+        padding-right: 0 !important;
+    }
+    .filter-two-column {
+        width: 100%;
+    }
+    .two-column-center {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .filter-day-year,
+    .filter-month {
+        width: 33.33%;
+        padding-right: 30px;
+    }
+    .date-fil-heading {
+        padding-bottom: 18px;
+    }
+}
+
+@media (max-width: 1108px) {
+    .btns-menus {
+        display: none !important;
+    }
+    .hamburger-search {
+        display: block;
+    }
+    .doon-slide-menus {
+        display: block;
+    }
+    .header {
+        transform: none !important;
+    }
+    .search-main.active {
+        width: 60%;
+        left: 0;
+        margin: 0 auto;
+        padding-right: 0;
+    }
+    .column-top-space {
+        flex-wrap: wrap;
+    }
+    .tenders-heading-space {
+        width: 50%;
+        padding-bottom: 24px;
+    }
+    .column-top-space :last-child {
+        padding-bottom: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .modal-dialog-one {
+        width: 70% !important;
+        margin: 8% auto !important;
+    }
+    .small-modal {
+        width: 68% !important;
+    }
+    .half-modal {
+        width: 52% !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .modal-dialog-two {
+        width: 100% !important;
+        margin: 0% auto !important;
+    }
+    .share-modal {
+        margin: 0% auto !important;
+    }
+}
+
+@media (max-width:900px) {
+    .list-profile-container {
+        padding: 50px 10% !important;
+    }
+    .left-right-input {
+        padding-bottom: 26px;
+    }
+    .right-input {
+        margin-left: 0% !important;
+    }
+    .align-tenders-list {
+        flex-direction: column;
+    }
+    .list-tender-background {
+        /* margin-left: 12px; */
+    }
+    .skills-industry-email {
+        /* display: block; */
+        margin-bottom: 6px;
+    }
+    .email-automotive {
+        /* padding-left: 20px; */
+    }
+    .small-slide {
+        display: block !important;
+    }
+    .desk-slide {
+        display: none !important;
+    }
+    .home-slider-text {
+        width: 60% !important;
+    }
+    .login-modal {
+        flex-direction: column;
+    }
+    .login-right-img {
+        justify-content: center !important;
+        padding-bottom: 24px;
+    }
+    .modal-content {
+        width: 100% !important;
+    }
+}
+
+@media (max-width:942px) {
+    .footer-input-btn {
+        display: flex;
+    }
+    .footer-container {
+        flex-direction: column;
+    }
+    .footer-menus-container {
+        width: 100%;
+        padding-bottom: 4px;
+        border-bottom: 2px solid;
+        margin-bottom: 20px;
+    }
+    .address {
+        width: 100% !important;
+        padding-top: 20px;
+        padding-bottom: 4px;
+        border-bottom: 2px solid;
+    }
+    .footer-input {
+        padding-bottom: 10px;
+        border-bottom: 2px solid;
+    }
+    .footer-input-address {
+        width: 100%;
+        flex-direction: column;
+    }
+}
+
+@media (max-width:758px) {
+    .about-row {
+        flex-direction: column;
+    }
+    .about-grid-box,
+    .about-grid-img {
+        width: 100%;
+    }
+    .about-grid-box {
+        order: 1 !important;
+    }
+    .about-grid-box {
+        padding-top: 40px;
+    }
+    .about-grid-img {
+        order: 2 !important;
+    }
+    .contact-us-container {
+        flex-direction: column;
+    }
+    .center-content {
+        padding: 30px 2%;
+    }
+    .contact-left-container,
+    .contact-right-container {
+        width: 100%;
+    }
+    .contact-spacing-container {
+        padding-right: 7%;
+    }
+}
+
+@media (max-width:1142px) {
+    .header-text {
+        top: 16.5%;
+    }
+    .home-slider-text h6 {
+        font-size: 18px;
+    }
+    .carousel-inner img {
+        height: fit-content;
+    }
+}
+
+@media (max-width:958px) {
+    .contact-right-container {
+        padding: 50px 6.4% !important;
+    }
+    .not-skip-last {
+        flex-direction: column;
+        padding-top: 30px !important;
+    }
+    .not-skip-img img {
+        width: 100%;
+    }
+}
+
+@media (max-width:800px) {
+    .date-center {
+        text-align: center;
+    }
+    .industries-filter-column,
+    .date-center {
+        width: 100%;
+        padding-bottom: 20px;
+    }
+    .inline {
+        display: inline-block;
+        padding-bottom: 22px;
+    }
+    .filter-row {
+        padding-left: 0;
+        flex-direction: column;
+    }
+    .filter-row :last-child {
+        padding-bottom: 0;
+    }
+    .date-filter {
+        flex-direction: column;
+    }
+    .news-post-container,
+    .next-prev-container {
+        flex-direction: column;
+    }
+    .news-post-left-container,
+    .news-post-right-container,
+    .next-prev-btns {
+        width: 100%;
+    }
+    .post-para {
+        padding-right: 10px;
+    }
+    .previous-post-link {
+        margin-bottom: 20px;
+    }
+    .next-prev-btns .outer-hov {}
+}
+
+@media (max-width:833px) {
+    /* .radio-btn {
+        justify-content: space-between;
+    } */
+    .md-radio {
+        padding-right: 3.6%;
+    }
+}
+
+@media (max-width:860px) {
+    .joining-community-indiv {
+        width: 50% !important;
+        padding-bottom: 40px !important;
+    }
+    .our-service-grey {
+        width: 100%;
+        padding: 60px 7.3%;
+    }
+    .half-grids-imgtext {
+        width: 100%;
+    }
+    .service-change-order :nth-child(1) {
+        order: 2;
+    }
+    .service-change-order :nth-child(2) {
+        order: 1;
+    }
+    .gray-container-two-column {
+        flex-direction: column;
+    }
+    .gray-container-column-two {
+        width: 100% !important;
+        padding-top: 38px;
+    }
+    /* .orderone {
+        order: 1
+    }
+    .ordertwo {
+        order: 2;
+    } */
+}
+
+@media (max-width:514px) {
+    .scroll-btn {
+        right: -3%;
+    }
+    .scroll-btn a img {
+        width: 73%
+    }
+    .joining-community-section {
+        text-align: center;
+        padding-right: 5% !important;
+    }
+    .our-service-grey {
+        text-align: center;
+    }
+    .joining-community-indiv {
+        width: 100% !important;
+    }
+    .half-grid {
+        width: 100% !important;
+    }
+    .half-grids-imgtext,
+    .half-grids-links {
+        flex-direction: column;
+    }
+    .home-slider-text {
+        width: 98% !important;
+        text-align: center;
+    }
+    .footer-input-btn input {
+        width: 100%;
+    }
+    .footer-input-btn button {
+        width: 130px;
+    }
+    .half-grid {
+        order: 1;
+    }
+    .white-grid-box {
+        order: 2;
+    }
+    .orderone {
+        order: 1
+    }
+    .ordertwo {
+        order: 2;
+    }
+    .get-in-touch {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        font-size: 18px !important;
+    }
+    .about-grey-container {
+        padding: 60px 8% !important;
+    }
+    .border-btn {
+        width: 100% !important;
+    }
+}
+
+@media (max-width:1106px) {
+    .menus li {
+        margin-right: 18px !important;
+    }
+}
+
+@media (max-width:1062px) {
+    .menus li {
+        margin-right: 0 !important;
+    }
+}
+
+@media (max-width:1002px) {
+    .personal-data {
+        flex-direction: column;
+    }
+}
+
+@media (max-width:1275px) {
+    .tenders-list-grid {
+        width: 50%;
+    }
+    .tenders-list-grid-two,
+    .tenders-list-grid-three {
+        text-align: unset;
+    }
+}
+
+
+/* Mobile Responsivness */
+
+
+/* #collapseOpenTwo.collapse.in .accordion-left-space:first-child {
+    padding-top: 50px;
+}
+
+#collapseOpenTwo.collapse.in .accordion-left-space {
+    padding-top: 80px;
+} */

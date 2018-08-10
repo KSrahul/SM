@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>list your profile</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/materialize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+</head>
+
+<body>
+
+    <header class="header" id="header">
+        <div class="header-section">
+
+            <div class="logo">
+                <div class="search-container">
+                    <a href="./index.html">
+                        <img src="./assets/icons/logo.svg" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div class="search-main large-search">
+                <div class="search-type-container">
+                    <span class="search-type-container">
+                        <input class="input-search" type="text" placeholder="Search by lorem ipsum, dolor and sit">
+                    </span>
+                    <div class="search-cross search-input">
+                        <img src="./assets//icons/search-icon.svg" alt="">
+                    </div>
+                    <div class="search-cross search-cross-icon">
+                        <img src="./assets/icons/cross.svg" alt="">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="menus-signing btns-menus post-menus">
+                <div class="nav-search">
+                    <ul class="menus">
+                        <li class="industries-dropdown">
+                            <a href="./industry.html">
+                                Industries
+                                <span class="jump top"></span>
+                                <span class="jump bottom"></span>
+                            </a>
+                            <ul class="industries-menus">
+                                <li>
+                                    <a href="./automotive-industry.html">Automotive Industry</a>
+                                </li>
+                                <li>
+                                    <a href="./industrial-machinery.html">Industrial Machinery Industry</a>
+                                </li>
+                                <li>
+                                    <a href="./aerospace.html">Aerospace &amp; Defense Industry</a>
+                                </li>
+                                <li>
+                                    <a href="./medical.html">Medical Devices Industry</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="./product.html">
+                                Products
+                                <span class="jump top"></span>
+                                <span class="jump bottom"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./events.html">
+                                Events
+                                <span class="jump top"></span>
+                                <span class="jump bottom"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./tenders.html">
+                                Tenders
+                                <span class="jump top"></span>
+                                <span class="jump bottom"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./finance.html">
+                                Financial Services
+                                <span class="jump top"></span>
+                                <span class="jump bottom"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./news.html">
+                                News &amp; Updates
+                                <span class="jump top"></span>
+                                <span class="jump bottom"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./market.html">
+                                Marketplace
+                                <span class="jump top"></span>
+                                <span class="jump bottom"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./academia.html">
+                                Academia
+                                <span class="jump top"></span>
+                                <span class="jump bottom"></span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- <div class="search-cont">
+                                <img class="search-icon" src="./assets/icons/search-icon.svg" alt="">
+                            </div> -->
+                </div>
+            </div>
+
+            <div class="header-btns-container btns-menus post-header-btn">
+                <!-- <div class="header-individual-btn">
+                            <a data-toggle="modal" data-target="#signup">
+                                <button class="header-button">Sign up</button>
+                            </a>
+                        </div> -->
+                <div class="search-cont search-post-icon">
+                    <img class="search-icon" src="./assets/icons/search-icon.svg" alt="">
+                </div>
+                <div class="profile-btn-main">
+                    <button class="header-button header-right-btn profile-btn">
+                                <span class="hi-user">
+                                    Hi 
+                                </span>
+                                Subahlakshmi
+                                <span class="profile-aero">
+                                    <img src="./assets/icons/profile-aero.svg" alt="">
+                                </span>
+                            </button>
+                    <div class="profile-drop-down">
+                        <ul>
+                            <li class="profile-menus">
+                                <span class="profile-drop-img">
+                                            <img src="./assets/icons/profile.svg" alt="">
+                                        </span>
+                                <a href="./profile.html">
+                                            Profile
+                                        </a>
+                            </li>
+                            <li class="profile-menus">
+                                <span class="profile-drop-img">
+                                            <img src="./assets/icons/logout.svg" alt="">
+                                        </span>
+                                <a href="">
+                                            Logout
+                                        </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hamburger-search">
+            <div class="flex-ham-icons">
+                <div class="search-cont smaill-screen-hearch">
+                    <img class="search-icon" src="./assets/icons/Mobile_Search Icon.svg" alt="">
+                </div>
+
+                <div class="doon-ham">
+                    <button class="doon-ham-link">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="doon-slide-menus">
+            <ul class="ham-menus">
+                <li class="mobile-dropdown">
+                    <a href="./industry.html">Industries</a>
+                </li>
+                <li>
+                    <a href="./product.html">Products</a>
+                </li>
+                <li>
+                    <a href="./events.html">Events</a>
+                </li>
+                <li>
+                    <a href="./tenders.html">Tenders</a>
+                </li>
+                <li>
+                    <a href="./finance.html">Financial Services</a>
+                </li>
+                <li>
+                    <a href="./news.html">News &amp; Updates</a>
+                </li>
+                <li>
+                    <a href="./market.html">Marketplace</a>
+                </li>
+                <li>
+                    <a href="./academia.html">Academia</a>
+                </li>
+            </ul>
+
+            <div>
+                <a href="./profile.html">
+                    <button class="header-button mob-ham-btn">Profile</button>
+                </a>
+            </div>
+            <div>
+                <a href="">
+                    <button class="header-button mob-ham-btn">Logout</button>
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="content">
+
+        <div class="black-background-top black-background-top-space">
+            <div class="black-background-top-btn">
+                <div>
+                    <ul class="list-profile-aero">
+                        <li class="black-background-aero">
+                            <a href="">News & Updates</a>
+                        </li>
+                        <li>
+                            <a>Title of the document...</a>
+                        </li>
+                    </ul>
+
+                    <h6 class="twenty-two post-title">
+                        Title of the document lorem ipsum dolor
+                    </h6>
+                </div>
+                <div class="news-btns">
+                    <a href="./assets/images/kapil.jpg" download="">
+                        <button class="download-share outer-hov">
+                            <span class="download-share-icon">
+                                <img src="./assets/icons/download-n.svg" alt="">
+                            </span>
+                            Download
+                        </button>
+                    </a>
+                    <a data-toggle="modal" data-target="#share">
+                        <button class="download-share outer-hov">
+                            <span class="download-share-icon">
+                                <img src="./assets/icons/share-n.svg" alt="">
+                            </span>
+                                Share
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="news-post-container">
+            <div class="news-post-left-container">
+                <p class="post-by download-content-by">
+                    By
+                    <span class="download-by">
+                            XYZ Company
+                    </span>
+                    <span class="download-content-date">
+                            25, February 2018
+                    </span>
+                </p>
+                <img class="post-img" src="./assets/images/news-post.png" alt="">
+                <div class="post-para">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et quam est. Nulla mollis erat at velit congue posuere. Aliquam auctor non ante non rutrum. Morbi ornare sodales nunc quis condimentum. Curabitur semper ullamcorper mi, vitae gravida nibh
+                        sodales vitae. Maecenas ut est id enim efficitur vestibulum quis at ligula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus ultricies in ante eu molestie. Vivamus facilisis
+                        scelerisque pharetra. Maecenas auctor tellus id neque sodales commodo. Aliquam efficitur, tortor et posuere convallis, libero enim cursus nibh, nec fringilla sem sem quis ante. Sed orci nibh, gravida quis ligula id, convallis porta
+                        ex. Cras consectetur magna turpis, sed convallis neque placerat in. Vestibulum sit amet ligula a tellus sollicitudin egestas.
+                    </p>
+                    <p>
+                        Donec et congue est, sed fringilla erat. Integer a sagittis orci, commodo ultrices neque. In mattis dui neque, placerat porttitor dui luctus id. Aliquam id venenatis odio, et vehicula nunc. Nulla facilisis, ipsum nec sagittis sollicitudin, lacus orci
+                        mattis ipsum, vel imperdiet mauris lacus vitae nunc. Suspendisse velit nisl, egestas consequat risus non, lacinia tempus metus. Nullam rhoncus auctor metus, interdum dapibus augue bibendum ut. Vivamus ultrices ante tellus, quis
+                        volutpat tellus suscipit at. Pellentesque ultrices quam sit amet neque bibendum sodales. Pellentesque dignissim nisl ac purus dignissim, quis sodales tellus dictum. Quisque ultricies consectetur ultrices. Nullam ultrices varius
+                        iaculis. Morbi eleifend fermentum nibh sed aliquam.
+                    </p>
+                    <p>
+                        Duis dictum felis eget purus tempor, porta ornare eros pharetra. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non condimentum neque. Ut tempus maximus tempus. Suspendisse nec auctor sapien. Aliquam feugiat, est nec efficitur consequat,
+                        lacus metus imperdiet lacus, ut blandit risus risus eu arcu. Ut elementum lectus non diam blandit ultricies. Sed eu auctor ipsum.
+                    </p>
+                </div>
+
+                <div class="next-prev-container">
+                    <a href="">
+                        <div class="previous-post-link next-prev-btns outer-hov">
+                            <span class="previous-post-icon hove-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="17" viewBox="0 0 10 17">
+                                    <path fill="none" fill-rule="evenodd" stroke="#00999A" stroke-width="2" d="M8.5 1.5l-7 7.09 7 6.91"/>
+                                </svg> 
+                            </span>
+                            <div>
+                                <p class="previous-post">
+                                    Previous Post
+                                </p>
+                                <p class="prev-next-para">
+                                    Title of the document lorem ipsum dolor
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="">
+                        <div class="next-post-link next-prev-btns outer-hov">
+                            <div>
+                                <p class="next-post">
+                                    Next Post
+                                </p>
+                                <p class="prev-next-para">
+                                    Title of the document lorem ipsum dolor
+                                </p>
+                            </div>
+                            <span class="next-post-icon hove-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16">
+                                    <path fill="none" fill-rule="evenodd" stroke="#00999A" stroke-width="2" d="M1 15l7-7.09L1 1"/>
+                                </svg>                                
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="news-post-right-container">
+                <h6 class="post-title-status">
+                    Other Publications
+                </h6>
+
+                <div class="post-title-date">
+                    <p class="title-post">
+                        Title of Publication lorem ipsum dolor
+                    </p>
+                    <p class="posts-date-by">
+                        By
+                        <span class="download-by">
+                                XYZ Company
+                        </span>
+                        <span class="download-content-date">
+                                25, February 2018
+                        </span>
+                    </p>
+                </div>
+
+                <div class="post-title-date">
+                    <p class="title-post">
+                        Title of Publication lorem ipsum dolor
+                    </p>
+                    <p class="posts-date-by">
+                        By
+                        <span class="download-by">
+                                XYZ Company
+                        </span>
+                        <span class="download-content-date">
+                                25, February 2018
+                        </span>
+                    </p>
+                </div>
+
+                <div class="post-title-date">
+                    <p class="title-post">
+                        Title of Publication lorem ipsum dolor
+                    </p>
+                    <p class="posts-date-by">
+                        By
+                        <span class="download-by">
+                                XYZ Company
+                        </span>
+                        <span class="download-content-date">
+                                25, February 2018
+                        </span>
+                    </p>
+                </div>
+
+                <div class="post-title-date">
+                    <p class="title-post">
+                        Title of Publication lorem ipsum dolor
+                    </p>
+                    <p class="posts-date-by">
+                        By
+                        <span class="download-by">
+                                XYZ Company
+                        </span>
+                        <span class="download-content-date">
+                                25, February 2018
+                        </span>
+                    </p>
+                </div>
+
+                <div class="post-title-date">
+                    <p class="title-post">
+                        Title of Publication lorem ipsum dolor
+                    </p>
+                    <p class="posts-date-by">
+                        By
+                        <span class="download-by">
+                                XYZ Company
+                        </span>
+                        <span class="download-content-date">
+                                25, February 2018
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-menus-container">
+                    <ul class="footer-menus footer-content">
+                        <li>
+                            <a href="./about.html">About us</a>
+                        </li>
+                        <li>
+                            <a href="./contact.html">Contact us</a>
+                        </li>
+                        <li>
+                            <a href="./faq.html">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="./copyright.html">Copyright</a>
+                        </li>
+                        <li>
+                            <a href="./sitemap.html">Sitemap</a>
+                        </li>
+                        <li>
+                            <a href="./privacy.html">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="./terms.html">Terms of use</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-input-address">
+                    <div class="footer-content footer-input">
+                        <form action="">
+                            <p>
+                                To get updates, sign up for our newsletter
+                            </p>
+
+                            <div class="footer-input-btn">
+                                <input type="text" required>
+                                <button class="outer-hov">
+                                        Sign up
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <address class="address footer-content">
+                                <p>
+                                    Address:
+                                </p>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing, elit, sed diam 122998
+                                </p>
+                            </address>
+                </div>
+
+            </div>
+        </footer>
+
+    </div>
+
+    <div class="container">
+        <div class="modal center-modal fade" id="share" role="dialog">
+            <div class="modal-dialog share-modal">
+                <div class="modal-header share-cross-modal">
+                    <button type="button" class="close close-modal" data-dismiss="modal">
+                        <img src="./assets/icons/share-cross.svg" alt="">
+                    </button>
+                </div>
+                <div class="share-modal-container">
+                    <h6 class="twenty-two share-modal-text">
+                        Share this:
+                    </h6>
+                    <div class="sharing-img-container">
+                        <div class="share-img-count">
+                            <a href="https://www.google.com/" target="blank">
+                                <img class="socials-icons" src="./assets/icons/facebook.svg" alt="">
+                                <div class="sharing-numbers">
+                                    <span>
+                                    496
+                                </span>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="share-img-count">
+                            <a href="https://www.google.com/" target="blank">
+                                <img class="socials-icons" src="./assets/icons/twitter.svg" alt="">
+                                <div class="sharing-numbers">
+                                    <span>
+                                    1,300
+                                </span>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="share-img-count">
+                            <a href="https://www.google.com/" target="blank">
+                                <img class="socials-icons" src="./assets/icons/google-plus.svg" alt="">
+                                <div class="sharing-numbers">
+                                    <span>
+                                        96
+                                </span>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="share-img-count">
+                            <a href="https://www.google.com/" target="blank">
+                                <img class="socials-icons" src="./assets/icons/linkedin.svg" alt="">
+                                <div class="sharing-numbers">
+                                    <span>
+                                        5
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js "></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js "></script>
+    <script src="./js/index.js "></script>
+</body>
+
+</html>

@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Market-Profile</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/materialize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+</head>
+
+<body>
+
+    <header class="header" id="header">
+        <div class="header-section">
+
+            <div class="logo">
+                <div class="search-container">
+                    <a href="./index.html">
+                        <img src="./assets/icons/logo.svg" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div class="search-main large-search">
+                <div class="search-type-container">
+                    <span class="search-type-container">
+                        <input class="input-search" type="text" placeholder="Search by lorem ipsum, dolor and sit">
+                    </span>
+                    <div class="search-cross search-input">
+                        <img src="./assets//icons/search-icon.svg" alt="">
+                    </div>
+                    <div class="search-cross search-cross-icon">
+                        <img src="./assets/icons/cross.svg" alt="">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="menus-signing btns-menus post-menus">
+                <div class="nav-search">
+                    <ul class="menus">
+                        <li class="industries-dropdown">
+                            <a href="./industry.html">
+                                Industries
+                                <span class="jump top"></span>
+                                <span class="jump bottom"></span>
+                            </a>
+                            <ul class="industries-menus">
+                                <li>
+                                    <a href="./automotive-industry.html">Automotive Industry</a>
+                                </li>
+                                <li>
+                                    <a href="./industrial-machinery.html">Industrial Machinery Industry</a>
+                                </li>
+                                <li>
+                                    <a href="./aerospace.html">Aerospace &amp; Defense Industry</a>
+                                </li>
+                                <li>
+                                    <a href="./medical.html">Medical Devices Industry</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="./product.html">
+                                Products
+                                <span class="jump top"></span>
+                                <span class="jump bottom"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./events.html">
+                                Events
+                                <span class="jump top"></span>
+                                <span class="jump bottom"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./tenders.html">
+                                Tenders
+                                <span class="jump top"></span>
+                                <span class="jump bottom"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./finance.html">
+                                Financial Services
+                                <span class="jump top"></span>
+                                <span class="jump bottom"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./news.html">
+                                News &amp; Updates
+                                <span class="jump top"></span>
+                                <span class="jump bottom"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./market.html">
+                                Marketplace
+                                <span class="jump top"></span>
+                                <span class="jump bottom"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./academia.html">
+                                Academia
+                                <span class="jump top"></span>
+                                <span class="jump bottom"></span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- <div class="search-cont">
+                                <img class="search-icon" src="./assets/icons/search-icon.svg" alt="">
+                            </div> -->
+                </div>
+            </div>
+
+            <div class="header-btns-container btns-menus post-header-btn">
+                <!-- <div class="header-individual-btn">
+                            <a data-toggle="modal" data-target="#signup">
+                                <button class="header-button">Sign up</button>
+                            </a>
+                        </div> -->
+                <div class="search-cont search-post-icon">
+                    <img class="search-icon" src="./assets/icons/search-icon.svg" alt="">
+                </div>
+                <div class="profile-btn-main">
+                    <button class="header-button header-right-btn profile-btn">
+                                <span class="hi-user">
+                                    Hi 
+                                </span>
+                                Subahlakshmi
+                                <span class="profile-aero">
+                                    <img src="./assets/icons/profile-aero.svg" alt="">
+                                </span>
+                            </button>
+                    <div class="profile-drop-down">
+                        <ul>
+                            <li class="profile-menus">
+                                <span class="profile-drop-img">
+                                    <img src="./assets/icons/profile.svg" alt="">
+                                </span>
+                                <a href="./profile.html">
+                                    Profile
+                                </a>
+                            </li>
+                            <li class="profile-menus">
+                                <span class="profile-drop-img">
+                                    <img src="./assets/icons/logout.svg" alt="">
+                                </span>
+                                <a href="">
+                                    Logout
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hamburger-search">
+            <div class="flex-ham-icons">
+                <div class="search-cont smaill-screen-hearch">
+                    <img class="search-icon" src="./assets/icons/Mobile_Search Icon.svg" alt="">
+                </div>
+
+                <div class="doon-ham">
+                    <button class="doon-ham-link">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="doon-slide-menus">
+            <ul class="ham-menus">
+                <li class="mobile-dropdown">
+                    <a href="./industry.html">Industries</a>
+                </li>
+                <li>
+                    <a href="./product.html">Products</a>
+                </li>
+                <li>
+                    <a href="./events.html">Events</a>
+                </li>
+                <li>
+                    <a href="./tenders.html">Tenders</a>
+                </li>
+                <li>
+                    <a href="./finance.html">Financial Services</a>
+                </li>
+                <li>
+                    <a href="./news.html">News &amp; Updates</a>
+                </li>
+                <li>
+                    <a href="./market.html">Marketplace</a>
+                </li>
+                <li>
+                    <a href="./academia.html">Academia</a>
+                </li>
+            </ul>
+
+            <div>
+                <a href="./profile.html">
+                    <button class="header-button mob-ham-btn">Profile</button>
+                </a>
+            </div>
+            <div>
+                <a href="">
+                    <button class="header-button mob-ham-btn">Logout</button>
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="content">
+
+        <div class="black-background-top gray-background-small-container">
+            <ul class="list-profile-aero">
+                <li class="black-background-aero">
+                    <a href="./market.html">Market Place</a>
+                </li>
+                <li class="black-background-aero">
+                    <a href="./market-service.html">Service Providers</a>
+                </li>
+                <li>
+                    <a>List your profile</a>
+                </li>
+            </ul>
+            <div class="top-black-container-align">
+                <div>
+                    <h6 class="twenty-two name-mail">
+                        Subahlakshmi Chandra
+                    </h6>
+                </div>
+                <div>
+                    <p class="marketplace-profile-mail">
+                        <span class="inbox-mail">
+                            <img src="./assets/icons/inbox.svg" alt="">
+                        </span> Subahlakshmi.mehendirata@gmail.com
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="two-column-accordion">
+            <div class="left-accordion">
+                <ul class="marketplace-acordion">
+                    <li class="marketplace-panel-heading " role="tab" id="headingOne">
+                        <a class="active" id="panellink1" onclick="togglePanels(1)" role="button" data-toggle="collapse" data-parent="#accordionGroupOpen" href="#collapseOpenOne" aria-expanded="true" aria-controls="collapseOpenOne">
+                                    About            
+                            </a>
+                    </li>
+                    <li class="marketplace-panel-heading" role="tab" id="headingTwo">
+                        <a id="panellink2" onclick="togglePanels(2)" role="button" data-toggle="collapse" data-parent="#accordionGroupOpen" href="#collapseOpenTwo" aria-expanded="true" aria-controls="collapseOpenTwo">
+                                    Skills            
+                            </a>
+                    </li>
+                    <li class="marketplace-panel-heading" role="tab" id="headingThree">
+                        <a id="panellink3" onclick="togglePanels(3)" role="button" data-toggle="collapse" data-parent="#accordionGroupOpen" href="#collapseOpenThree" aria-expanded="true" aria-controls="collapseOpenThree">
+                            Pricing and Offers
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="right-accordion">
+                <div class="" id="accordionGroupOpen" role="tablist" aria-multiselectable="true">
+
+                    <div class="tab-panel panel">
+                        <div class="" role="tab" id="headingOne">
+                            <div class="accordion-spacing">
+                                <h4 class="panel-title right-panel-heading">
+                                    <a onclick="togglePanels(1)" class="minus plus" role="button" data-toggle="collapse" data-parent="#accordionGroupOpen" href="#collapseOpenOne" aria-expanded="true" aria-controls="collapseOpenOne">
+                                            About
+                                            
+                                        </a>
+                                </h4>
+                            </div>
+                        </div>
+                        <div id="collapseOpenOne" class="panel-collapse collapse-content collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="accordion-spacing accordion-content-space">
+                                <p>
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
+                                    on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat
+                                    craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                </p>
+
+                                <div class="accordion-bottom-content">
+                                    <h4 class="sixteen accordion-content-heading">
+                                        Speciality
+                                    </h4>
+                                    <p>
+                                        Motion Graphics and Interaction
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-panel panel">
+                        <div class="" role="tab" id="headingTwo">
+                            <div class="accordion-spacing">
+                                <h4 class="panel-title right-panel-heading">
+                                    <a onclick="togglePanels(2)" class="collapsed minus plus" role="button" data-toggle="collapse" data-parent="#accordionGroupOpen" href="#collapseOpenTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            Skills
+                                            </a>
+                                </h4>
+                            </div>
+                        </div>
+                        <div id="collapseOpenTwo" class="panel-collapse collapse-content collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="accordion-spacing accordion-content-space">
+                                <p>
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
+                                    on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat
+                                    craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                </p>
+
+                                <div class="accordion-bottom-content">
+                                    <div class="align-accordion-content">
+                                        <div class="skill-number">
+                                            <span class="right-panel-heading">
+                                                01
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <h4 class="sixteen">
+                                                Lorem Ipsum
+                                            </h4>
+                                            <p>
+                                                Adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis es nostrud exerci tation ullamcorper suscipit lobortis nisl ut.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="align-accordion-content">
+                                        <div class="skill-number">
+                                            <span class="right-panel-heading">
+                                                02
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <h4 class="sixteen">
+                                                Lorem Ipsum
+                                            </h4>
+                                            <p>
+                                                Adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis es nostrud exerci tation ullamcorper suscipit lobortis nisl ut.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="align-accordion-content">
+                                        <div class="skill-number">
+                                            <span class="right-panel-heading">
+                                                    03
+                                                </span>
+                                        </div>
+                                        <div>
+                                            <h4 class="sixteen">
+                                                Lorem Ipsum
+                                            </h4>
+                                            <p>
+                                                Adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis es nostrud exerci tation ullamcorper suscipit lobortis nisl ut.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-panel panel">
+                        <div class="" role="tab" id="headingThree">
+                            <div class="accordion-spacing">
+                                <h4 class="panel-title right-panel-heading">
+                                    <a onclick="togglePanels(3)" class="collapsed minus plus" role="button" data-toggle="collapse" data-parent="#accordionGroupOpen" href="#collapseOpenThree" aria-expanded="false" aria-controls="collapseThree">
+                                            Pricing and Offers
+                                        </a>
+                                </h4>
+                            </div>
+                        </div>
+                        <div id="collapseOpenThree" class="panel-collapse collapse-content collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="accordion-spacing accordion-content-space">
+                                <h1 class="pricing">
+                                    $2,500/
+                                </h1>
+                                <div class="">
+                                    <h4 class="sixteen accordion-content-heading">
+                                        Speciality
+                                    </h4>
+                                    <p>
+                                        sollicitudin, lacus orci mattis ipsum, vel imperdiet mauris lacus vitae nunc. Suspendisse velit nisl, egestas consequat risus non, lacinia tempus metus. Nullam rhoncus auctor metus, interdum dapibus augue bibendum ut. Vivamus ultrices ante tellus, quis
+                                        volutpat tellus suscipit at. Pellentesque ultrices quam sit amet neque bibendum sodales. Pellentesque dignissim nisl ac purus dignissim, quis sodales tellus dictum. Quisque ultricies consectetur ultrices. Nullam
+                                        ultrices varius iaculis. Morbi eleifend fermentum nibh sed aliquam.
+                                    </p>
+                                </div>
+                                <table class="table table-responsive accordion-table">
+                                    <thead class="center">
+                                        <tr>
+                                            <th>
+                                                Lorem Ipsum
+                                            </th>
+                                            <th>
+                                                </span> Dolor Sit
+                                            </th>
+                                            <th>
+                                                Amet consecteur
+                                            </th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody class="table-border center">
+                                        <tr>
+                                            <td>19.00 %</td>
+                                            <td>₹ 2,000</td>
+                                            <td>₹ 3,976</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Botafogo</td>
+                                            <td>28</td>
+                                            <td>14</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Grêmio</td>
+                                            <td>28</td>
+                                            <td>14</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-menus-container">
+                <ul class="footer-menus footer-content">
+                    <li>
+                        <a href="./about.html">About us</a>
+                    </li>
+                    <li>
+                        <a href="./contact.html">Contact us</a>
+                    </li>
+                    <li>
+                        <a href="./faq.html">FAQ</a>
+                    </li>
+                    <li>
+                        <a href="./copyright.html">Copyright</a>
+                    </li>
+                    <li>
+                        <a href="./sitemap.html">Sitemap</a>
+                    </li>
+                    <li>
+                        <a href="./privacy.html">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="./terms.html">Terms of use</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-input-address">
+                <div class="footer-content footer-input">
+                    <form action="">
+                        <p>
+                            To get updates, sign up for our newsletter
+                        </p>
+
+                        <div class="footer-input-btn">
+                            <input type="text" required>
+                            <button class="outer-hov">
+                                    Sign up
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <address class="address footer-content">
+                            <p>
+                                Address:
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing, elit, sed diam 122998
+                            </p>
+                        </address>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js "></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js "></script>
+    <script src="./js/index.js "></script>
+</body>
+
+</html>

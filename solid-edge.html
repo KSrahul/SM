@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Solid Edge</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/materialize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+</head>
+
+<body>
+
+    <header class="header" id="header">
+        <div class="header-section">
+
+            <div class="logo">
+                <div class="search-container">
+                    <a href="./index.html">
+                        <img src="./assets/icons/logo.svg" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div class="search-main large-search">
+                <div class="search-type-container">
+                    <span class="search-type-container">
+                        <input class="input-search" type="text" placeholder="Search by lorem ipsum, dolor and sit">
+                    </span>
+                    <div class="search-cross search-input">
+                        <img src="./assets//icons/search-icon.svg" alt="">
+                    </div>
+                    <div class="search-cross search-cross-icon">
+                        <img src="./assets/icons/cross.svg" alt="">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="menus-signing btns-menus post-menus">
+                <div class="nav-search">
+                    <ul class="menus">
+                        <li class="industries-dropdown">
+                            <a href="./industry.html">
+                                Industries
+                                <span class="jump top"></span>
+                                <span class="jump bottom"></span>
+                            </a>
+                            <ul class="industries-menus">
+                                <li>
+                                    <a href="./automotive-industry.html">Automotive Industry</a>
+                                </li>
+                                <li>
+                                    <a href="./industrial-machinery.html">Industrial Machinery Industry</a>
+                                </li>
+                                <li>
+                                    <a href="./aerospace.html">Aerospace &amp; Defense Industry</a>
+                                </li>
+                                <li>
+                                    <a href="./medical.html">Medical Devices Industry</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="./product.html">
+                                Products
+                                <span class="jump top"></span>
+                                <span class="jump bottom"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./events.html">
+                                Events
+                                <span class="jump top"></span>
+                                <span class="jump bottom"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./tenders.html">
+                                Tenders
+                                <span class="jump top"></span>
+                                <span class="jump bottom"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./finance.html">
+                                Financial Services
+                                <span class="jump top"></span>
+                                <span class="jump bottom"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./news.html">
+                                News &amp; Updates
+                                <span class="jump top"></span>
+                                <span class="jump bottom"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./market.html">
+                                Marketplace
+                                <span class="jump top"></span>
+                                <span class="jump bottom"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./academia.html">
+                                Academia
+                                <span class="jump top"></span>
+                                <span class="jump bottom"></span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- <div class="search-cont">
+                                        <img class="search-icon" src="./assets/icons/search-icon.svg" alt="">
+                                    </div> -->
+                </div>
+            </div>
+
+            <div class="header-btns-container btns-menus post-header-btn">
+                <!-- <div class="header-individual-btn">
+                                    <a data-toggle="modal" data-target="#signup">
+                                        <button class="header-button">Sign up</button>
+                                    </a>
+                                </div> -->
+                <div class="search-cont search-post-icon">
+                    <img class="search-icon" src="./assets/icons/search-icon.svg" alt="">
+                </div>
+                <div class="profile-btn-main">
+                    <button class="header-button header-right-btn profile-btn">
+                        <span class="hi-user">
+                            Hi 
+                        </span>
+                        Subahlakshmi
+                        <span class="profile-aero">
+                            <img src="./assets/icons/profile-aero.svg" alt="">
+                        </span>
+                    </button>
+                    <div class="profile-drop-down">
+                        <ul>
+                            <li class="profile-menus">
+                                <span class="profile-drop-img">
+                                    <img src="./assets/icons/profile.svg" alt="">
+                                </span>
+                                <a href="./profile.html">
+                                    Profile
+                                </a>
+                            </li>
+                            <li class="profile-menus">
+                                <span class="profile-drop-img">
+                                    <img src="./assets/icons/logout.svg" alt="">
+                                </span>
+                                <a href="">
+                                    Logout
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hamburger-search">
+            <div class="flex-ham-icons">
+                <div class="search-cont smaill-screen-hearch">
+                    <img class="search-icon" src="./assets/icons/Mobile_Search Icon.svg" alt="">
+                </div>
+
+                <div class="doon-ham">
+                    <button class="doon-ham-link">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="doon-slide-menus">
+            <ul class="ham-menus">
+                <li class="mobile-dropdown">
+                    <a href="./industry.html">Industries</a>
+                </li>
+                <li>
+                    <a href="./product.html">Products</a>
+                </li>
+                <li>
+                    <a href="./events.html">Events</a>
+                </li>
+                <li>
+                    <a href="./tenders.html">Tenders</a>
+                </li>
+                <li>
+                    <a href="./finance.html">Financial Services</a>
+                </li>
+                <li>
+                    <a href="./news.html">News &amp; Updates</a>
+                </li>
+                <li>
+                    <a href="./market.html">Marketplace</a>
+                </li>
+                <li>
+                    <a href="./academia.html">Academia</a>
+                </li>
+            </ul>
+
+            <div>
+                <a href="./profile.html">
+                    <button class="header-button mob-ham-btn">Profile</button>
+                </a>
+            </div>
+            <div>
+                <a href="">
+                    <button class="header-button mob-ham-btn">Logout</button>
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="content">
+
+        <div class="black-background-top black-background-top-space">
+            <div class="black-background-top-btn">
+                <div>
+                    <ul class="list-profile-aero">
+                        <li class="black-background-aero">
+                            <a href="./product.html">Products</a>
+                        </li>
+                        <li>
+                            <a>Solid Edge</a>
+                        </li>
+                    </ul>
+
+                    <h6 class="twenty-two">
+                        Solid Edge
+                    </h6>
+                </div>
+                <div class="news-btns">
+
+                    <a href="./contact.html" target="blank">
+                        <button class="one-forty-btn download-share outer-hov">
+                            <span class="download-share-icon">
+                                <img src="./assets/icons/inquiry.svg" alt="">
+                            </span>
+                            Send Inquiry
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="two-column-accordion">
+            <div class="left-accordion">
+                <ul class="marketplace-acordion">
+                    <li class="marketplace-panel-heading active" role="tab" id="headingOne">
+                        <a class="active" id="panellink1" onclick="togglePanels(1);toggleOfferingList(this);" role="button" data-toggle="collapse" data-parent="#accordionGroupOpen" href="#collapseOpenOne" aria-expanded="true" aria-controls="collapseOpenOne">
+                                Overview
+                                
+                            </a>
+                    </li>
+                    <li class="marketplace-panel-heading" role="tab" id="headingTwo">
+                        <a class="" id="panellink2" onclick="togglePanels(2); toggleOfferingList(this);" role="button" data-toggle="collapse" data-parent="#accordionGroupOpen" href="#collapseOpenTwo" aria-expanded="true" aria-controls="collapseOpenTwo">
+                                Offerings
+                        </a>
+
+                        <ul class="sub-accordion sub-accordion-close">
+                            <li><a class="accordion-anchor active" href="#1" onclick="anchor(this)">Design</a></li>
+                            <li><a class="accordion-anchor" href="#2" onclick="anchor(this)">Simulation</a></li>
+                            <li><a class="accordion-anchor" href="#3" onclick="anchor(this)">Manufacturing</a></li>
+                            <li><a class="accordion-anchor" href="#4" onclick="anchor(this)">Technical Publications</a></li>
+                            <li><a class="accordion-anchor" href="#5" onclick="anchor(this)">Data Management</a></li>
+                            <li><a class="accordion-anchor" href="#6" onclick="anchor(this)">Apps</a></li>
+                            <li><a class="accordion-anchor" href="#7" onclick="anchor(this)">Industry Solution</a></li>
+                            <li><a class="accordion-anchor" href="#8" onclick="anchor(this)">Academic Program</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="right-accordion" id="no-bottom-padding" style="padding-top: 0;">
+                <div class="" id="accordionGroupOpen" role="tablist" aria-multiselectable="true">
+
+                    <div class="tab-panel panel">
+                        <div class="" role="tab" id="headingOne">
+                            <div class="accordion-spacing">
+                                <h4 class="panel-title right-panel-heading">
+                                    <a onclick="togglePanels(1); toggleOfferingList(this);" class="overview minus plus" role="button" data-toggle="collapse" data-parent="#accordionGroupOpen" href="#collapseOpenOne" aria-expanded="true" aria-controls="collapseOpenOne">
+                                        Overview  
+                                    </a>
+                                </h4>
+                            </div>
+                        </div>
+                        <div id="collapseOpenOne" class="panel-collapse collapse-content collapse in overview-cont" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="accordion-content-space">
+                                <img class="accordion-right-img" src="./assets/images/overviewProduct.png" alt="">
+                                <p class="accordion-spacing">
+                                    Solid Edge is a portfolio of affordable, easy-to-use software tools that address all aspects of the product development process. Solid Edge is the most comprehensive and scalable digital product development system with powerful capabilities ranging from
+                                    2D Drafting to an advanced 3D system – complete with assembly design, automated drawing production, simulation and assembly applications.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="no-bottom-border tab-panel panel">
+                        <div class="" role="tab" id="headingTwo">
+                            <div class="remove-border accordion-spacing">
+                                <h4 class="panel-title right-panel-heading">
+                                    <a onclick="togglePanels(2); toggleOfferingList(this); noPadding();" class="collapsed offering minus plus" role="button" data-toggle="collapse" data-parent="#accordionGroupOpen" href="#collapseOpenTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            Offerings
+                                    </a>
+                                </h4>
+                            </div>
+                        </div>
+                        <div id="collapseOpenTwo" class="remove-content-border panel-collapse collapse-content collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="accordion-left-space flex" id="1">
+                                <div class="accordion-left-column">
+                                    <h5 class="accordion-internal-column sixteen-bold">
+                                        Design
+                                    </h5>
+
+                                    <div class="accordion-internal-column">
+                                        <h6 class="sixteen-bold para-heading-internal">
+                                            What Is Solid Edge
+                                        </h6>
+                                        <p>
+                                            Solid Edge uses synchronous technology to help you accelerate product design, make revisions faster, and improve design data re-use. By integrating the mechanical, electrical and electronic aspects of product design you can effectively get products to
+                                            market faster, better service customer needs and reduce engineering design costs.
+                                        </p>
+                                    </div>
+                                    <p class="accordion-sub-detail">
+                                        <a class="accordion-sub-detail-text" href="">
+                                            Know More
+                                        </a>
+                                    </p>
+                                </div>
+                                <div class="accordion-right-column">
+                                    <img class="accordion-right-img" src="./assets/images/design.png" alt="">
+                                </div>
+                            </div>
+
+                            <div class="accordion-left-space accordion-top-space flex" id="2">
+                                <div class="accordion-left-column">
+                                    <h5 class="accordion-internal-column sixteen-bold">
+                                        Simulation
+                                    </h5>
+
+                                    <div class="accordion-internal-column">
+                                        <h6 class="sixteen-bold para-heading-internal">
+                                            What Is Solid Edge
+                                        </h6>
+                                        <p>
+                                            Solid Edge Simulation software is an easy to use, built-in finite element analysis tool that enables design engineers to digitally validate part and assembly designs within the Solid Edge environment. Simulation capabilities of Solid Edge include simulation
+                                            of individual parts, assembly analysis, definition and analysis of complete systems and computational fluid dynamics (CFD).
+                                        </p>
+                                    </div>
+                                    <p class="accordion-sub-detail">
+                                        <a class="accordion-sub-detail-text" href="">
+                                                Know More
+                                            </a>
+                                    </p>
+                                </div>
+                                <div class="accordion-right-column">
+                                    <img class="accordion-right-img" src="./assets/images/simulation.png" alt="">
+                                </div>
+                            </div>
+
+                            <div class="accordion-left-space accordion-top-space flex" id="3">
+                                <div class="accordion-left-column">
+                                    <h5 class="accordion-internal-column sixteen-bold">
+                                        Manufacturing
+                                    </h5>
+
+                                    <div class="accordion-internal-column">
+                                        <h6 class="sixteen-bold para-heading-internal">
+                                            What Is Solid Edge
+                                        </h6>
+                                        <p>
+                                            Solid Edge manufacturing solutions help manufacturers to define and execute a wide range of traditional and new manufacturing processes including CNC machining, nesting, cutting, bending, molding, welding, assembling, and additive manufacturing. Solid
+                                            Edge allows you to maximize the value of your investments in the latest, most efficient and most capable machine tools.
+                                        </p>
+                                    </div>
+                                    <p class="accordion-sub-detail">
+                                        <a class="accordion-sub-detail-text" href="">
+                                            Know More
+                                        </a>
+                                    </p>
+                                </div>
+                                <div class="accordion-right-column">
+                                    <img class="accordion-right-img" src="./assets/images/manufacturing.png" alt="">
+                                </div>
+                            </div>
+
+                            <div class="accordion-left-space accordion-top-space flex" id="4">
+                                <div class="accordion-left-column">
+                                    <h5 class="accordion-internal-column sixteen-bold">
+                                        Technical Publications
+                                    </h5>
+
+                                    <div class="accordion-internal-column">
+                                        <h6 class="sixteen-bold para-heading-internal">
+                                            What Is Solid Edge
+                                        </h6>
+                                        <p>
+                                            Solid Edge offers a full suite of tools that lets designers author, edit, distribute and explore design alternatives and technical documents quickly and easily.  With design to publication integration and ability to perform rapid and flexible edits, Solid
+                                            Edge reduces the need for specialist technical authors or external services and enables producing top quality documents in-house.
+                                        </p>
+                                    </div>
+                                    <p class="accordion-sub-detail">
+                                        <a class="accordion-sub-detail-text" href="">
+                                            Know More
+                                        </a>
+                                    </p>
+                                </div>
+                                <div class="accordion-right-column">
+                                    <img class="accordion-right-img" src="./assets/images/design.png" alt="">
+                                </div>
+                            </div>
+
+                            <div class="accordion-left-space accordion-top-space flex" id="5">
+                                <div class="accordion-left-column">
+                                    <h5 class="accordion-internal-column sixteen-bold">
+                                        Data Management
+                                    </h5>
+
+                                    <div class="accordion-internal-column">
+                                        <h6 class="sixteen-bold para-heading-internal">
+                                            What Is Solid Edge
+                                        </h6>
+                                        <p>
+                                            Scalable data management solutions from Solid Edge enables you to effectively work with the fast-growing volumes of data created in product designing and manufacturing process. Pervasive integration with Microsoft SharePoint and Teamcenter gives you the
+                                            ability to manage data across the entire product development cycle helping you to maximize productivity and streamline global operations.
+                                        </p>
+                                    </div>
+                                    <p class="accordion-sub-detail">
+                                        <a class="accordion-sub-detail-text" href="">
+                                            Know More
+                                        </a>
+                                    </p>
+                                </div>
+                                <div class="accordion-right-column">
+                                    <img class="accordion-right-img" src="./assets/images/simulation.png" alt="">
+                                </div>
+                            </div>
+
+                            <div class="accordion-left-space accordion-top-space flex" id="6">
+                                <div class="accordion-left-column">
+                                    <h5 class="accordion-internal-column sixteen-bold">
+                                        Apps
+                                    </h5>
+
+                                    <div class="accordion-internal-column">
+                                        <h6 class="sixteen-bold para-heading-internal">
+                                            What Is Solid Edge
+                                        </h6>
+                                        <p>
+                                            The Solid Edge App Marketplace mobile app helps customers easily search for, compare and purchase partner developed apps for Solid Edge software. Solid Edge apps available on a variety of platforms extend the capabilities of Solid Edge to provide an efficient
+                                            collaborative process among your team, your customers and suppliers with access to information anywhere and at any time on the device of their choice.
+                                        </p>
+                                    </div>
+                                    <p class="accordion-sub-detail">
+                                        <a class="accordion-sub-detail-text" href="">
+                                            Know More
+                                        </a>
+                                    </p>
+                                </div>
+                                <div class="accordion-right-column">
+                                    <img class="accordion-right-img" src="./assets/images/manufacturing.png" alt="">
+                                </div>
+                            </div>
+
+                            <div class="accordion-left-space accordion-top-space flex" id="7">
+                                <div class="accordion-left-column">
+                                    <h5 class="accordion-internal-column sixteen-bold">
+                                        Industry Solution
+                                    </h5>
+
+                                    <div class="accordion-internal-column">
+                                        <h6 class="sixteen-bold para-heading-internal">
+                                            What Is Solid Edge
+                                        </h6>
+                                        <p>
+                                            Solid Edge provides users with world-class part modeling, assembly design and engineering drawing solutions to meet a wide range of business needs across industries. Solid Edge combines the speed and simplicity of direct modeling with the flexibility
+                                            and control of parametric design get products to deliver the fastest, most flexible design experience possible while easing the challenges inherit in performing product development.
+                                        </p>
+                                    </div>
+                                    <p class="accordion-sub-detail">
+                                        <a class="accordion-sub-detail-text" href="">
+                                            Know More
+                                        </a>
+                                    </p>
+                                </div>
+                                <div class="accordion-right-column">
+                                    <img class="accordion-right-img" src="./assets/images/design.png" alt="">
+                                </div>
+                            </div>
+
+                            <div class="accordion-left-space accordion-top-space flex" id="8">
+                                <div class="accordion-left-column">
+                                    <h5 class="accordion-internal-column sixteen-bold">
+                                        Academic Program
+                                    </h5>
+
+                                    <div class="accordion-internal-column">
+                                        <h6 class="sixteen-bold para-heading-internal">
+                                            What Is Solid Edge
+                                        </h6>
+                                        <p>
+                                            Solid Edge Student Edition is a free download available to students or instructors to help them learn engineering principles by practicing software’s same core functionality used by leading engineers. Siemens also provides students with free access to
+                                            topic-based or project-based tutorials, online self-paced courses and interactive learning resources and also offers Solid Edge Certification that gives them competitive edge when applying to jobs.
+                                        </p>
+                                    </div>
+                                    <p class="accordion-sub-detail">
+                                        <a class="accordion-sub-detail-text" href="">
+                                            Know More
+                                        </a>
+                                    </p>
+                                </div>
+                                <div class="accordion-right-column">
+                                    <img class="accordion-right-img" src="./assets/images/simulation.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-menus-container">
+                <ul class="footer-menus footer-content">
+                    <li>
+                        <a href="./about.html">About us</a>
+                    </li>
+                    <li>
+                        <a href="./contact.html">Contact us</a>
+                    </li>
+                    <li>
+                        <a href="./faq.html">FAQ</a>
+                    </li>
+                    <li>
+                        <a href="./copyright.html">Copyright</a>
+                    </li>
+                    <li>
+                        <a href="./sitemap.html">Sitemap</a>
+                    </li>
+                    <li>
+                        <a href="./privacy.html">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="./terms.html">Terms of use</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-input-address">
+                <div class="footer-content footer-input">
+                    <form action="">
+                        <p>
+                            To get updates, sign up for our newsletter
+                        </p>
+
+                        <div class="footer-input-btn">
+                            <input type="text" required>
+                            <button class="outer-hov">
+                                    Sign up
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <address class="address footer-content">
+                            <p>
+                                Address:
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing, elit, sed diam 122998
+                            </p>
+                        </address>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js "></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js "></script>
+    <script src="./js/index.js "></script>
+</body>
+
+</html>
