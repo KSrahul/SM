@@ -1,4 +1,4 @@
-if (window.location == "file:///Users/rahulalam/Desktop/Siemens/index.html") {
+if (window.location == "file:///Users/rahulalam/Desktop/Test/index.html") {
     document.getElementsByTagName("body")[0].style = "overflow: hidden"
     document.onreadystatechange = function() {
         setTimeout(function() {
@@ -15,7 +15,7 @@ if (window.location == "file:///Users/rahulalam/Desktop/Siemens/index.html") {
 }
 
 // For automatically hide or onclick, the account deactivation message.
-if (window.location == "file:///Users/rahulalam/Desktop/Siemens/deactivate-home.html") {
+if (window.location == "file:///Users/rahulalam/Desktop/Test/deactivate-home.html") {
     setInterval(function() {
         if (document.getElementById("deactivateMessage").className = "deactivate-message-show") {
             document.getElementById("deactivateMessage").className = "deactivate-message-show hide_Deactivation";
@@ -88,7 +88,7 @@ function filterHide() {
 // For Filter color fill onclick
 
 // For onclick bottom to top scrolling
-if (window.location == "file:///Users/rahulalam/Desktop/Siemens/tenders.html") {
+if (window.location == "file:///Users/rahulalam/Desktop/Test/tenders.html") {
     function topScroll() {
         if (window.pageYOffset > 1000) {
             document.getElementById("scroll-btn").className = "scroll-btn active";
