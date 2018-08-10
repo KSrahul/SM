@@ -1,4 +1,4 @@
-if (window.location == "file:///Users/rahulalam/Desktop/Test/index.html") {
+if (window.location == "https://ksrahul.github.io/Test/") {
     document.getElementsByTagName("body")[0].style = "overflow: hidden"
     document.onreadystatechange = function() {
         setTimeout(function() {
