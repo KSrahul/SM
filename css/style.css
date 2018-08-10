@@ -8,9 +8,9 @@ html {
     /* overflow-x: hidden; */
 }
 
-.loader {
+
+/* .loader {
     opacity: 0;
-    /* transition: 0.6s; */
     pointer-events: none;
     overflow: hidden;
 }
@@ -19,7 +19,7 @@ html {
     opacity: 1;
     transition: 0.9s;
     pointer-events: unset;
-}
+} */
 
 
 /* Loader */
