@@ -395,5 +395,22 @@ $(document).ready(function() {
     //     $(".added").append("<input type='text' name'text'><br>");
     // });
 
+    // For Search Location initialize
+    function initialize() {
+        var input = document.getElementById('searchTextField');
+        new google.maps.places.Autocomplete(input);
+        autocomplete = new google.maps.places.Autocomplete(
+            /** @type {HTMLInputElement} */
+            (document.getElementById('searchTextField')), { types: ['geocode'] });
+        google.maps.event.addListener(autocomplete, 'place_changed', function() {
+            var place = autocomplete.getPlace();
+            if (place.geometry) {
+                addCity(document.getElementById('searchTextField'));
+            }
+
+        });
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+    // For Search Location initialize
 
 });
