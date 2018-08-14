@@ -1,18 +1,18 @@
-if (window.location == "https://ksrahul.github.io/Test/") {
-    document.getElementsByTagName("body")[0].style = "overflow: hidden"
-    document.onreadystatechange = function() {
-        setTimeout(function() {
-            if (document.readyState == "complete") {
-                document.getElementById("loaderSpiner").className = "loader remove"
-                document.getElementById("loader").className = "removeLoaded"
-                document.getElementsByTagName("body")[0].style = "overflow: scroll"
-            } else {
-                document.getElementById("loaderSpiner").className = "loader remove"
-                document.getElementById("loader").className = ""
-            }
-        }, 2000)
-    }
+document.getElementsByTagName("body")[0].style = "overflow: hidden"
+document.onreadystatechange = function() {
+    setTimeout(function() {
+        if (document.readyState == "complete") {
+            document.getElementById("loaderSpiner").className = "loader remove"
+            document.getElementById("loader").className = "removeLoaded"
+            document.getElementsByTagName("body")[0].style = "overflow: scroll"
+        } else {
+            document.getElementById("loaderSpiner").className = "loader"
+            document.getElementById("loader").className = ""
+            document.getElementsByTagName("body")[0].style = "overflow: hidden"
+        }
+    }, 2000)
 }
+
 
 // For automatically hide or onclick, the account deactivation message.
 if (window.location == "file:///Users/rahulalam/Desktop/Test/deactivate-home.html") {
