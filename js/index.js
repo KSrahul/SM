@@ -1,14 +1,14 @@
-document.getElementsByTagName("body")[0].style = "overflow: hidden"
+// document.getElementsByTagName("body")[0].style = "overflow: hidden"
 document.onreadystatechange = function() {
     setTimeout(function() {
         if (document.readyState == "complete") {
             document.getElementById("loaderSpiner").className = "loader remove"
             document.getElementById("loader").className = "removeLoaded"
-            document.getElementsByTagName("body")[0].style = "overflow: scroll"
+                // document.getElementsByTagName("body")[0].style = "overflow: scroll"
         } else {
             document.getElementById("loaderSpiner").className = "loader"
             document.getElementById("loader").className = ""
-            document.getElementsByTagName("body")[0].style = "overflow: hidden"
+                // document.getElementsByTagName("body")[0].style = "overflow: hidden"
         }
     }, 2000)
 }
