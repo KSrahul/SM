@@ -8,6 +8,14 @@ html {
     /* overflow-x: hidden; */
 }
 
+#hidden {
+    overflow: hidden;
+}
+
+#hidden.active {
+    overflow: scroll;
+}
+
 .loader {
     opacity: 0;
     pointer-events: none;

@@ -1,15 +1,14 @@
 if (window.location == "https://ksrahul.github.io/Siemens/" || "https://ksrahul.github.io/Siemens/index.html") {
-    document.getElementsByTagName("body")[0].style = "overflow: hidden"
     document.onreadystatechange = function() {
         setTimeout(function() {
             if (document.readyState == "complete") {
                 document.getElementById("loaderSpiner").className = "loader remove"
                 document.getElementById("loader").className = "removeLoaded"
-                document.getElementsByTagName("body")[0].style = "overflow: scroll"
+                document.getElementById("hidden").className = "active"
             } else {
                 document.getElementById("loaderSpiner").className = "loader"
                 document.getElementById("loader").className = ""
-                document.getElementsByTagName("body")[0].style = "overflow: hidden"
+                document.getElementById("hidden").className = ""
             }
         }, 2500)
     }
