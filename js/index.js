@@ -1,4 +1,4 @@
-if (window.location == "https://ksrahul.github.io/Siemens/" && "https://ksrahul.github.io/Siemens/index.html") {
+if (window.location == "https://ksrahul.github.io/Siemens/" || "https://ksrahul.github.io/Siemens/index.html") {
     document.getElementsByTagName("body")[0].style = "overflow: hidden"
     document.onreadystatechange = function() {
         setTimeout(function() {
