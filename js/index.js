@@ -11,7 +11,7 @@ if (window.location == "https://ksrahul.github.io/Siemens/" || "https://ksrahul.
                 document.getElementById("loader").className = ""
                 document.getElementsByTagName("body")[0].style = "overflow: hidden"
             }
-        }, 2000)
+        }, 2500)
     }
 }
 // For automatically hide or onclick, the account deactivation message.
