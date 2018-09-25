@@ -8,6 +8,24 @@ html {
     /* overflow-x: hidden; */
 }
 
+.noneI,
+.fileN,
+.input-default.removed {
+    display: none;
+}
+
+#removeF {
+    cursor: pointer;
+}
+
+.uploadF {
+    padding: 0px 8px
+}
+
+.fileN.uploaded {
+    display: block;
+}
+
 #hidden {
     overflow: hidden;
 }
@@ -4113,6 +4131,7 @@ td {
 
 .drop-file-icon {
     padding-right: 8px;
+    font-family: SiemensSans-bold;
 }
 
 .file-type {
@@ -4123,9 +4142,10 @@ td {
     padding-top: 10px;
 }
 
-.uploaded {
+
+/* .uploaded {
     display: none;
-}
+} */
 
 .remove-border {
     border-bottom: 1px solid #cecece;

@@ -15,6 +15,7 @@
 </head>
 
 <body>
+    <a href=""></a>
 
     <header class="header" id="header">
         <div class="header-section">
@@ -310,14 +311,14 @@
                         </span>
                         <span class="underline"></span>
                     </div>
-
-                    <div class="focus add-more-input added">
-                        <span>
-                            <input class="text-field unremoved-input-line" type="text" placeholder="Skill 02">
-                        </span>
-                        <span class="underline"></span>
+                    <div class="eParent">
+                        <div class="focus add-more-input added">
+                            <span>
+                                <input class="text-field unremoved-input-line" type="text" placeholder="Enter another skill">
+                            </span>
+                            <span class="underline"></span>
+                        </div>
                     </div>
-
                     <div>
                         <p class="add-input">
                             + Add another Skill
@@ -336,30 +337,26 @@
                         <div class="background-input-upload">
                             <div class="input-file-icon">
                                 <div class="flex input-default">
-                                    <!-- <span class="drop-file-icon">
-                                        <img src="./assets/icons/drop.svg" alt="">
-                                    </span> -->
                                     <span class="drop-file-icon">
                                         Upload your resume
                                     </span>
                                     <span class="file-choose">
-                                        <input class="input-file" type="file">
-                                        <span>choose file</span>
+                                        Choose file
+                                    </span>
+                                    <span class="noneI">
+                                        <input class="input-file" type="file" size="10KB" accept=".pdf,.jpeg,.png" value="">
                                     </span>
                                 </div>
-                                <div class="uploaded flex input-default">
-                                    <span class="drop-file-icon">
-                                            <img src="./assets/icons/drop.svg" alt="">
-                                        </span>
-                                    <span class="drop-file-icon">
-                                            Drop your file here to upload or 
-                                        </span>
-                                    <span class="file-choose">
-                                            <img src="./assets/icons/x.svg" alt="">
-                                        </span>
-                                </div>
-                                <div class="file-upload-filename">
-
+                                <div class="fileN">
+                                    <span>
+                                        <img src="./assets/icons/resumeU.svg" alt="">
+                                    </span>
+                                    <span class="uploadF">
+                                        No chosen file
+                                    </span>
+                                    <span id="removeF">
+                                        <img src="./assets/icons/x.svg" alt="">
+                                    </span>
                                 </div>
                             </div>
                         </div>

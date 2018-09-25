@@ -1,18 +1,73 @@
-if (window.location == "https://ksrahul.github.io/Siemens/" || "https://ksrahul.github.io/Siemens/index.html") {
-    document.onreadystatechange = function() {
-        setTimeout(function() {
-            if (document.readyState == "complete") {
-                document.getElementById("loaderSpiner").className = "loader remove"
-                document.getElementById("loader").className = "removeLoaded"
-                document.getElementById("hidden").className = "active"
-            } else {
-                document.getElementById("loaderSpiner").className = "loader"
-                document.getElementById("loader").className = ""
-                document.getElementById("hidden").className = ""
-            }
-        }, 2500)
+// var addC = document.querySelector(".add-input");
+// var object = document.querySelector(".eParent");
+// addC.addEventListener("click", function() {
+//     object
+// });
+
+// var addC = document.querySelector(".add-input");
+// addC.addEventListener("click", function() {
+//     var boxes = document.querySelector(".eParent");
+//     var clone = boxes.firstElementChild.cloneNode(true);
+//     boxes.append(clone);
+// });
+
+if (window.location == "file:///Users/rahulalam/Desktop/Test/post-profile.html") {
+    var chooseText = document.querySelector(".input-default");
+    var uploaded = document.querySelector(".fileN");
+    var filesUploaded = document.querySelector(".uploadF");
+    var clickFile = document.querySelector(".file-choose");
+    var inputFile = document.querySelector(".input-file");
+    var removeFile = document.getElementById("removeF");
+
+    clickFile.addEventListener("click", function() {
+        inputFile.click();
+        // alert("Clicked");
+    });
+    inputFile.addEventListener("change", function() {
+        if (inputFile.value) {
+            chooseText.className = "flex input-default removed";
+            uploaded.className = "uploaded";
+            filesUploaded.innerHTML = inputFile.value.replace("C:\\fakepath\\", "Rahul")
+                // alert(inputFile.value.substring(12));
+        } else {
+            // alert("Value not Changed");
+        }
+    });
+    removeFile.addEventListener("click", function() {
+        chooseText.className = "flex input-default";
+        uploaded.className = "fileN";
+        filesUploaded.innerHTML = "No chosen file";
+    });
+
+}
+
+// For Header Scroll
+function headerScroll() {
+    var scroll = window.scrollY;
+    if (scroll > 0) {
+        document.getElementById("header").className = "header active";
+    } else {
+        document.getElementById("header").className = "header";
     }
 }
+document.addEventListener("scroll", headerScroll);
+// For Header Scroll
+
+if ((window.location == "file:///Users/rahulalam/Desktop/Test/index.html") || (window.location == "https://ksrahul.github.io/Siemens/index.html")) {
+    setTimeout(function() {
+        if (document.readyState == "complete") {
+            document.getElementById("loaderSpiner").className = "loader remove"
+            document.getElementById("loader").className = "removeLoaded"
+            document.getElementById("hidden").className = "active"
+        } else {
+            document.getElementById("loaderSpiner").className = "loader"
+            document.getElementById("loader").className = ""
+            document.getElementById("hidden").className = ""
+        }
+    }, 2500)
+
+}
+
 // For automatically hide or onclick, the account deactivation message.
 if (window.location == "file:///Users/rahulalam/Desktop/Test/deactivate-home.html") {
     setInterval(function() {
@@ -30,17 +85,6 @@ function hideMessage() {
     }
 }
 // For automatically hide or onclick, the account deactivation message.
-// For Header Scroll
-function headerScroll() {
-    var scroll = window.scrollY;
-    if (scroll > 0) {
-        document.getElementById("header").className = "header active";
-    } else {
-        document.getElementById("header").className = "header";
-    }
-}
-document.addEventListener("scroll", headerScroll);
-// For Header Scroll
 
 // For Search location cross icon
 function searchPlace() {
