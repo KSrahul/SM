@@ -1,17 +1,4 @@
-// var addC = document.querySelector(".add-input");
-// var object = document.querySelector(".eParent");
-// addC.addEventListener("click", function() {
-//     object
-// });
-
-// var addC = document.querySelector(".add-input");
-// addC.addEventListener("click", function() {
-//     var boxes = document.querySelector(".eParent");
-//     var clone = boxes.firstElementChild.cloneNode(true);
-//     boxes.append(clone);
-// });
-
-if (window.location == "file:///Users/rahulalam/Desktop/Test/post-profile.html") {
+if ((window.location == "file:///Users/rahulalam/Desktop/Test/post-profile.html") || (window.location == "https://ksrahul.github.io/Siemens/post-profile.html")) {
     var chooseText = document.querySelector(".input-default");
     var uploaded = document.querySelector(".fileN");
     var filesUploaded = document.querySelector(".uploadF");
@@ -27,8 +14,8 @@ if (window.location == "file:///Users/rahulalam/Desktop/Test/post-profile.html")
         if (inputFile.value) {
             chooseText.className = "flex input-default removed";
             uploaded.className = "uploaded";
-            filesUploaded.innerHTML = inputFile.value.replace("C:\\fakepath\\", "Rahul")
-                // alert(inputFile.value.substring(12));
+            filesUploaded.innerHTML = inputFile.value.substring(12);
+            // alert("Value hanged");
         } else {
             // alert("Value not Changed");
         }
