@@ -1,4 +1,4 @@
-if (window.location == "https://ksrahul.github.io/Siemens/post-profile.html") {
+if ((window.location == "file:///Users/rahulalam/Desktop/Test/post-profile.html") || (window.location == "https://ksrahul.github.io/Siemens/post-profile.html")) {
     var chooseText = document.querySelector(".input-default");
     var uploaded = document.querySelector(".fileN");
     var filesUploaded = document.querySelector(".uploadF");
