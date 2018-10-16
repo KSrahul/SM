@@ -488,7 +488,7 @@ a:hover {
     padding-right: 6%;
 }
 
-.menus ul li.current-menu-item a {
+.menus li.current-menu-item a {
     background-color: red !important;
 }
 
