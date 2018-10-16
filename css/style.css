@@ -488,6 +488,10 @@ a:hover {
     padding-right: 6%;
 }
 
+.menus li a:active {
+    background-color: red;
+}
+
 .menus li {
     display: flex;
     letter-spacing: -0.1px;

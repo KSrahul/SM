@@ -40,7 +40,7 @@ function headerScroll() {
 document.addEventListener("scroll", headerScroll);
 // For Header Scroll
 
-if ((window.location == "https://ksrahul.github.io/Siemens/") || (window.location == "https://ksrahul.github.io/Siemens/index.html")) {
+if (window.location == "file:///Users/rahulalam/Desktop/Test/index.html" || "https://ksrahul.github.io/Siemens/index.html") {
     setTimeout(function() {
         if (document.readyState == "complete") {
             document.getElementById("loaderSpiner").className = "loader remove"
