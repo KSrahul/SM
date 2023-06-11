@@ -40,20 +40,20 @@ function headerScroll() {
 document.addEventListener("scroll", headerScroll);
 // For Header Scroll
 
-if (window.location == "file:///Users/rahulalam/Desktop/Test/index.html" || "https://ksrahul.github.io/Siemens/index.html") {
-    setTimeout(function() {
-        if (document.readyState == "complete") {
-            document.getElementById("loaderSpiner").className = "loader remove"
-            document.getElementById("loader").className = "removeLoaded"
-            document.getElementById("hidden").className = "active"
-        } else {
-            document.getElementById("loaderSpiner").className = "loader"
-            document.getElementById("loader").className = ""
-            document.getElementById("hidden").className = ""
-        }
-    }, 2500)
+// if (window.location == "file:///Users/rahulalam/Desktop/Test/index.html" || "https://ksrahul.github.io/Siemens/index.html") {
+//     setTimeout(function() {
+//         if (document.readyState == "complete") {
+//             document.getElementById("loaderSpiner").className = "loader remove"
+//             document.getElementById("loader").className = "removeLoaded"
+//             document.getElementById("hidden").className = "active"
+//         } else {
+//             document.getElementById("loaderSpiner").className = "loader"
+//             document.getElementById("loader").className = ""
+//             document.getElementById("hidden").className = ""
+//         }
+//     }, 2500)
 
-}
+// }
 
 // For automatically hide or onclick, the account deactivation message.
 if (window.location == "file:///Users/rahulalam/Desktop/Test/deactivate-home.html") {
