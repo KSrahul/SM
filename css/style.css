@@ -35,15 +35,15 @@ html {
 }
 
 .loader {
-    opacity: 0;
+/*     opacity: 0;
     pointer-events: none;
-    overflow: hidden;
+    overflow: hidden; */
 }
 
 .loader.remove {
-    opacity: 1;
+/*     opacity: 1;
     transition: 0.9s;
-    pointer-events: unset;
+    pointer-events: unset; */
 }
 
 
