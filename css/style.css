@@ -27,11 +27,11 @@ html {
 }
 
 #hidden {
-    overflow: hidden;
+/*     overflow: hidden; */
 }
 
 #hidden.active {
-    overflow: scroll;
+/*     overflow: scroll; */
 }
 
 .loader {
